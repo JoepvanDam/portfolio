@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script defer type="text/javascript" src="./scripts/portfolioScript.js"></script>
+    <link rel="stylesheet" href="./stylesheets/mainStyle.css">
+    <title>Portfolio | Joep van Dam</title>
+</head>
+
+<body>
+    <div id="fullPage">
+
+        <div id="top">
+            <div id="darkmodeWrapper">
+                <img id="darkmodeImgSun" src="./images/sun.svg" onclick="darkmodeSwitch()">
+                <img id="darkmodeImgMoon" src="./images/moon.svg" onclick="darkmodeSwitch()">
+            </div>
+            <div id="languageWrapper"><img id="languageImg" src="./images/flagEN.svg" onclick="languageSwitch()"></div>
+
+            <div id="progressBar">
+                <div id="progress"></div>
+            </div>
+        </div>
+
+        <div class="part" id="part1">
+            <svg id="littleHouse" width="700" height="861" viewBox="0 0 700 861" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <ellipse id="smoke1" cx="494" cy="187.5" rx="26" ry="36.5" fill="#D9D9D9" />
+                <ellipse id="smoke2" rx="24.7763" ry="36.6412"
+                    transform="matrix(0.92114 0.389231 -0.391672 0.920105 505.174 144.102)" fill="#D9D9D9" />
+                <ellipse id="smoke3" rx="36.1402" ry="47.7948"
+                    transform="matrix(0.784241 0.620456 -0.62327 0.782007 538.544 100.745)" fill="#D9D9D9" />
+                <ellipse id="smoke4" rx="43.2812" ry="56.9582"
+                    transform="matrix(0.374395 0.92727 -0.928223 0.372025 601.926 61.3232)" fill="#D9D9D9" />
+                <rect id="homeRectangle" x="100" y="461" width="500" height="400" fill="#7C7C7C" />
+                <rect id="chimneyRectangle" x="468" y="201.0961" width="50" height="150" fill="#7C7C7C" />
+                <path id="roofTriangle" d="M350 161L653.109 461H46.8911L350 161Z" fill="#616161" />
+                <rect id="doorRectangle" x="158" y="661" width="100" height="200" fill="#ABABAB" />
+                <rect id="homeWindow" x="350" y="661" width="171.429" height="160.332" fill="#8C9FB6" />
+                <ellipse id="doorKnob" cx="179.571" cy="761.017" rx="8.57143" ry="8.01661" fill="#7C7C7C" />
+                <text opacity="0.75" fill="white" font-family="Arial" font-size="34" font-weight="600"
+                    letter-spacing="0em">
+                    <tspan font-size="50" x="32%" y="520">Welcome!</tspan>
+                    <tspan x="38%" y="570">I am Joep,</tspan>
+                    <tspan x="20%" y="610">Programmer & IT Student</tspan>
+                </text>
+            </svg>
+
+            <svg id="nav1" width="403" height="671" viewBox="0 0 403 671" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect class="navHover" onclick="doScrolling(1)" id="nav1Rectangle2" x="74.6411" y="82.8194"
+                    width="116.359" height="39.0826" fill="#959595" />
+                <path id="nav1Triangle2" d="M75.6613 82.9052L75.6613 121.902L41 100.448L75.6613 82.9052Z"
+                    fill="#959595" />
+                <text id="nav1Text1" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter"
+                    font-size="24" letter-spacing="0em">
+                    <tspan x="99.8635" y="111.088">Home</tspan>
+                </text>
+                <rect class="navHover" onclick="doScrolling(2)" id="nav1Rectangle3" width="116.359" height="39.0826"
+                    transform="matrix(-1 0 0 1 327.359 131.819)" fill="#959595" />
+                <path id="nav1Triangle3" d="M326.339 131.905L326.339 170.902L361 149.448L326.339 131.905Z"
+                    fill="#959595" />
+                <text id="nav1Text2" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter"
+                    font-size="24" letter-spacing="0em">
+                    <tspan x="224.91" y="160.227">Projects</tspan>
+                </text>
+                <rect class="navHover" onclick="doScrolling(3)" id="nav1Rectangle4" width="116.359" height="39.0826"
+                    transform="matrix(-1 0 0 1 327.359 181.819)" fill="#959595" />
+                <path id="nav1Triangle4" d="M326.339 181.905L326.339 220.902L361 199.448L326.339 181.905Z"
+                    fill="#959595" />
+                <text id="nav1Text3" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter"
+                    font-size="24" letter-spacing="0em">
+                    <tspan x="236.945" y="210.227">About</tspan>
+                </text>
+                <rect class="navHover" onclick="doScrolling(4)" id="nav1Rectangle5" width="116.359" height="39.0826"
+                    transform="matrix(-1 0 0 1 327.359 231.819)" fill="#959595" />
+                <path id="nav1Triangle5" d="M326.339 231.905L326.339 270.902L361 249.448L326.339 231.905Z"
+                    fill="#959595" />
+                <text id="nav1Text4" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter"
+                    font-size="24" letter-spacing="0em">
+                    <tspan x="225.906" y="260.227">Contact</tspan>
+                </text>
+                <rect id="nav1Rectangle1" x="191" y="21" width="20" height="650" fill="#656565" />
+                <path id="nav1Light" d="M199.5 28.7165L229.046 28L402.702 669.25H0L172 28L199.5 28.7165Z"
+                    fill="url(#lampPaint)" fill-opacity="0.25" />
+                <ellipse id="nav1Triangle1" cx="200.338" cy="17" rx="38.5" ry="17" fill="#656565" />
+                <path id="nav1Lamp"
+                    d="M231 27C231 31.1421 217.345 37 200.5 37C183.655 37 170 31.1421 170 27C170 22.8579 183.655 16 200.5 16C217.345 16 231 22.8579 231 27Z"
+                    fill="#8D8D8D" />
+                <defs>
+                    <linearGradient id="lampPaint" x1="201.351" y1="28" x2="201.351" y2="28"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#E4C590" />
+                        <stop offset="1" stop-color="#E4C590" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="part" id="part2">
+            <svg id="littleOffice" width="700" height="1000" viewBox="0 0 700 1000" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect id="officeRectangle" width="700" height="1000" fill="#838383" />
+                <rect id="frontBoardRectangle" x="225" y="717" width="250" height="75" rx="20" fill="#A0A0A0" />
+                <text id="frontBoardText" fill="black" font-family="Arial" font-size="50" letter-spacing="0em">
+                    <tspan x="259" y="771">Projects</tspan>
+                </text>
+                <rect id="behindDoor" x="225" y="800" width="250" height="200" fill="#ACD2FF" />
+                <rect id="doorLeft" d x="225" y="800" width="125" height="200" fill="#6C6C6C" fill-opacity="0.5" />
+                <rect id="doorRight" x="350" y="800" width="125" height="200" fill="#6C6C6C" fill-opacity="0.5" />
+                <rect id="window1" x="46" y="59" width="150" height="150" fill="#8C9FB6" />
+                <rect id="window2" x="275" y="59" width="150" height="150" fill="#8C9FB6" />
+                <rect id="window3" x="504" y="59" width="150" height="150" fill="#8C9FB6" />
+                <rect id="window4" x="46" y="281" width="150" height="150" fill="#8C9FB6" />
+                <rect id="window5" x="275" y="281" width="150" height="150" fill="#8C9FB6" />
+                <text fill="black" font-family="Arial" font-size="30" letter-spacing="0em">
+                    <tspan x="289" y="312">Project 2</tspan>
+                </text>
+                <rect id="window6" x="504" y="281" width="150" height="150" fill="#8C9FB6" />
+                <text fill="black" font-family="Arial" font-size="30" letter-spacing="0em">
+                    <tspan x="517" y="312">Project 3</tspan>
+                </text>
+                <rect id="window7" x="46" y="498" width="150" height="150" fill="#8C9FB6" />
+                <text fill="black" font-family="Arial" font-size="30" letter-spacing="0em">
+                    <tspan x="59" y="529">Project 1</tspan>
+                </text>
+                <rect id="window8" x="275" y="498" width="150" height="150" fill="#8C9FB6" />
+                <rect id="window9" x="504" y="498" width="150" height="150" fill="#8C9FB6" />
+            </svg>
+
+            <svg id="nav2" width="320" height="620" viewBox="0 0 320 620" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect id="nav2Rectangle1" x="150" y="20" width="20" height="600" fill="#656565" />
+                <path id="nav2Triangle1" d="M160 0L170 20H150L160 0Z" fill="#656565" />
+                <rect onclick="doScrolling(1)" class="navHover" id="nav2Rectangle2" x="33.6412" y="30.8194"
+                    width="116.359" height="39.0826" fill="#959595" />
+                <path id="nav2Triangle2" d="M34.6613 30.9052L34.6613 69.902L-2.67354e-05 48.4485L34.6613 30.9052Z"
+                    fill="#959595" />
+                <text id="nav2Text1" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
+                    <tspan x="58.8636" y="59.088">Home</tspan>
+                </text>
+                <rect onclick="doScrolling(2)" class="navHover" id="nav2Rectangle3" x="33.6412" y="80.8194"
+                    width="116.359" height="39.0826" fill="#959595" />
+                <path id="nav2Triangle3" d="M34.6613 80.9052L34.6613 119.902L-2.67354e-05 98.4485L34.6613 80.9052Z"
+                    fill="#959595" />
+                <text id="nav2Text2" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
+                    <tspan x="43.9102" y="109.227">Projects</tspan>
+                </text>
+                <rect onclick="doScrolling(3)" class="navHover" id="nav2Rectangle4" width="116.359" height="39.0826"
+                    transform="matrix(-1 0 0 1 286.359 130.819)" fill="#959595" />
+                <path id="nav2Triangle4" d="M285.339 130.905L285.339 169.902L320 148.448L285.339 130.905Z"
+                    fill="#959595" />
+                <text id="nav2Text3" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
+                    <tspan x="195.945" y="159.227">About</tspan>
+                </text>
+                <rect onclick="doScrolling(4)" class="navHover" id="nav2Rectangle5" width="116.359" height="39.0826"
+                    transform="matrix(-1 0 0 1 286.359 180.819)" fill="#959595" />
+                <path id="nav2Triangle5" d="M285.339 180.905L285.339 219.902L320 198.448L285.339 180.905Z"
+                    fill="#959595" />
+                <text id="nav2Text4" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
+                    <tspan x="184.906" y="209.227">Contact</tspan>
+                </text>
+            </svg>
+        </div>
+
+        <div class="part" id="part3">
+
+            <img id="atcTower" src="./images/airport2.png">
+
+            <svg id="nav3" width="320" height="620" viewBox="0 0 320 620" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect id="nav3Rectangle1" x="150" y="20" width="20" height="600" fill="#656565" />
+                <path id="nav3Triangle1" d="M160 0L170 20H150L160 0Z" fill="#656565" />
+                <rect onclick="doScrolling(1)" class="navHover" id="nav3Rectangle2" x="33.6411" y="30.8194"
+                    width="116.359" height="39.0826" fill="#959595" />
+                <path id="nav3Triangle2" d="M34.6613 30.9052L34.6613 69.902L-2.67354e-05 48.4485L34.6613 30.9052Z"
+                    fill="#959595" />
+                <text id="nav3Text1" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
+                    <tspan x="58.8635" y="59.088">Home</tspan>
+                </text>
+                <rect onclick="doScrolling(2)" class="navHover" id="nav3Rectangle3" x="33.6411" y="80.8194"
+                    width="116.359" height="39.0826" fill="#959595" />
+                <path id="nav3Triangle3" d="M34.6613 80.9052L34.6613 119.902L-2.67354e-05 98.4485L34.6613 80.9052Z"
+                    fill="#959595" />
+                <text id="nav3Text2" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
+                    <tspan x="43.9102" y="109.227">Projects</tspan>
+                </text>
+                <rect onclick="doScrolling(3)" class="navHover" id="nav3Rectangle4" x="33.6411" y="130.819"
+                    width="116.359" height="39.0826" fill="#959595" />
+                <path id="nav3Triangle4" d="M34.6613 130.905L34.6613 169.902L-2.67354e-05 148.448L34.6613 130.905Z"
+                    fill="#959595" />
+                <text id="nav3Text3" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
+                    <tspan x="55.9453" y="159.227">About</tspan>
+                </text>
+                <rect onclick="doScrolling(4)" class="navHover" id="nav3Rectangle5" width="116.359" height="39.0826"
+                    transform="matrix(-1 0 0 1 286.359 180.819)" fill="#959595" />
+                <path id="nav3Triangle5" d="M285.339 180.905L285.339 219.902L320 198.448L285.339 180.905Z"
+                    fill="#959595" />
+                <text id="nav3Text4" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
+                    <tspan x="184.906" y="209.227">Contact</tspan>
+                </text>
+            </svg>
+        </div>
+
+        <div class="part" id="part4">
+            <svg id="littleBillboard" width="1000" height="861" viewBox="0 0 1000 861" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect id="billboardSupportLeft" x="128.572" y="614.846" width="71.4286" height="246.154"
+                    fill="#717171" />
+                <rect id="billboardSupportRight" x="808.571" y="614.846" width="71.4286" height="246.154"
+                    fill="#717171" />
+                <rect id="aboveBillboard" x="1.5" y="19.5" width="997" height="97" fill="#ABABAB" stroke="black"
+                    stroke-width="3" />
+                <rect id="billboardRectangle" x="1.5" y="119.5" width="997" height="497" fill="#C2C2C2" stroke="black"
+                    stroke-width="3" />
+                <rect id="billboardSupportLeftStand" x="92.8572" y="836" width="142.857" height="24.6154"
+                    fill="#4F4F4F" />
+                <rect id="billboardSupportRightStand" x="772.857" y="836.385" width="142.857" height="24.6154"
+                    fill="#4F4F4F" />
+                <circle id="billboardLight1" cx="54" cy="68" r="30" fill="#989898" />
+                <circle id="billboardLight2" cx="278.286" cy="68" r="30" fill="#989898" />
+                <circle id="billboardLight3" cx="725.429" cy="68" r="30" fill="#989898" />
+                <circle id="billboardLight4" cx="946.857" cy="68" r="30" fill="#989898" />
+                <circle id="billboardLight5" cx="502.572" cy="68" r="30" fill="#989898" />
+                <rect x="202.5" y="301.596" width="595" height="295.903" fill="#9F9F9F" stroke="black"
+                    stroke-width="5" />
+                <line x1="202.399" y1="299.902" x2="797.599" y2="299.902" stroke="black" stroke-width="2" />
+                <mask id="path-14-inside-1_109_41" fill="white">
+                    <path d="M200 419.458H800V600H200V419.458Z" />
+                </mask>
+                <path d="M200 419.458H800V600H200V419.458Z" fill="#9F9F9F" />
+                <path
+                    d="M800 600V605H805V600H800ZM200 600H195V605H200V600ZM795 419.458V600H805V419.458H795ZM800 595H200V605H800V595ZM205 600V419.458H195V600H205Z"
+                    fill="black" mask="url(#path-14-inside-1_109_41)" />
+                <path d="M500 596.176L204.506 299.794L499.988 299.798L795.485 299.802L500 596.176Z" fill="#9F9F9F"
+                    stroke="black" stroke-width="2" />
+                <path d="M321.201 417.051L203.7 594.251" stroke="black" stroke-width="2" />
+                <line y1="-1" x2="211.284" y2="-1"
+                    transform="matrix(0.550918 0.83456 -0.833033 0.553224 677.601 418.857)" stroke="black"
+                    stroke-width="2" />
+                <path
+                    d="M298 332C298 323.716 304.716 317 313 317H683C691.284 317 698 323.716 698 332V352C698 360.284 691.284 367 683 367H313C304.716 367 298 360.284 298 352V332Z"
+                    fill="#3300FF" fill-opacity="0.5" />
+                <text fill="white" font-family="Arial" font-size="48" letter-spacing="0em">
+                    <tspan onclick="contactForm(0)" x="346" y="360">Contact Form</tspan>
+                </text>
+                <path
+                    d="M725.029 281C683.41 281 649.82 247.365 650.001 205.539C650.182 164.1 683.924 130.585 725.784 131.004C766.829 131.393 800.33 164.728 799.998 206.675C799.666 247.873 766.316 280.88 725.029 281ZM724.999 136.894C687.545 136.774 656.278 167.001 655.916 205.24C655.524 244.196 686.942 274.722 724.245 275.11C762.242 275.499 793.871 245.033 794.052 206.585C794.263 167.838 763.419 136.894 724.999 136.894Z"
+                    fill="#E65C4F" />
+                <path
+                    d="M764.566 171.904C768.61 171.485 772.413 174.684 772.684 178.75C772.745 179.827 772.684 180.933 772.684 182.039C772.322 182.039 772.05 182.278 771.749 182.488C768.429 184.85 765.139 187.182 761.819 189.543C750.743 197.078 739.667 204.582 728.621 212.146C727.474 212.923 726.176 213.521 725.271 214.628C724.758 214.717 724.426 214.388 724.064 214.119C715.13 207.96 706.167 201.772 697.233 195.613C694.185 193.52 691.167 191.427 687.877 189.185C687.877 189.992 687.877 190.53 687.877 191.068C687.877 199.619 687.877 208.2 687.877 216.75C687.877 224.314 687.907 231.878 687.938 239.443C687.938 239.652 687.907 239.861 687.907 240.07C682.897 241.027 678.642 238.665 677.525 234.27C677.374 233.642 677.314 232.985 677.314 232.357C677.314 214.807 677.344 197.227 677.284 179.677C677.254 175.223 681.268 171.276 685.463 171.904C685.614 172.053 685.734 172.203 685.885 172.322C698.591 181.651 711.297 190.979 723.973 200.307C724.728 200.875 725.18 200.785 725.874 200.277C733.782 194.477 741.719 188.706 749.626 182.936C754.606 179.289 759.586 175.581 764.566 171.904Z"
+                    fill="#E65A4D" />
+                <path
+                    d="M687.907 239.472C687.877 231.908 687.877 224.344 687.847 216.78C687.847 208.229 687.847 199.649 687.847 191.098C687.847 190.56 687.847 190.052 687.847 189.215C691.106 191.457 694.154 193.55 697.203 195.643C706.136 201.801 715.1 207.99 724.033 214.149C724.395 214.388 724.727 214.717 725.24 214.657C725.301 215.315 725.904 215.495 726.357 215.794C736.618 222.849 746.88 229.845 757.111 236.961C758.409 237.858 759.918 238.516 760.914 239.831C760.612 240.22 760.189 240.13 759.797 240.13C736.015 240.13 712.232 240.1 688.45 240.1C688.662 239.801 688.873 239.532 689.084 239.233C689.748 239.024 690.352 238.755 690.593 238.037C691.861 237.858 692.615 236.961 693.4 236.094C692.313 236.542 691.287 237.021 690.533 237.978C689.869 238.187 689.265 238.456 689.024 239.173C688.662 239.233 688.299 239.353 687.907 239.472ZM705.985 227.513C706.076 227.513 706.166 227.513 706.287 227.513C706.679 227.304 707.162 227.214 707.192 226.616C707.434 226.616 707.675 226.557 707.796 226.317C707.886 226.228 708.007 226.108 708.098 226.019C708.339 226.019 708.581 225.959 708.701 225.72C708.732 225.66 708.792 225.63 708.822 225.57C708.762 225.6 708.732 225.66 708.671 225.69C708.43 225.69 708.188 225.749 708.068 225.989C707.977 226.078 707.856 226.198 707.766 226.288C707.524 226.288 707.283 226.347 707.162 226.587C706.74 226.587 706.438 226.796 706.257 227.185C706.166 227.304 706.076 227.394 705.985 227.513C705.925 227.543 705.864 227.573 705.834 227.633C705.895 227.603 705.955 227.573 705.985 227.513ZM704.174 228.709C704.416 228.709 704.657 228.65 704.778 228.41C705.019 228.38 705.261 228.351 705.231 228.052C705.231 228.022 705.17 227.962 705.14 227.962C704.808 227.932 704.778 228.171 704.748 228.41C704.506 228.41 704.295 228.44 704.174 228.709C704.054 228.799 703.963 228.889 703.842 228.978C703.601 228.978 703.359 229.038 703.239 229.277C703.148 229.367 703.027 229.487 702.937 229.576C702.695 229.576 702.454 229.636 702.333 229.875C701.911 229.905 701.609 230.085 701.428 230.473C701.337 230.563 701.247 230.683 701.126 230.772C701.096 230.832 701.036 230.862 701.005 230.922C701.066 230.892 701.096 230.832 701.156 230.802C701.398 230.802 701.639 230.742 701.76 230.503C702.122 230.473 702.333 230.294 702.363 229.905C702.605 229.905 702.846 229.845 702.967 229.606C703.058 229.517 703.178 229.397 703.269 229.307C703.51 229.307 703.752 229.247 703.872 229.008C703.993 228.919 704.084 228.829 704.174 228.709ZM699.345 231.998C699.104 232.028 698.863 232.058 698.893 232.387C698.893 232.417 698.953 232.476 698.983 232.476C699.285 232.476 699.315 232.237 699.345 231.998C699.617 232.028 699.828 231.968 699.979 231.729C700.221 231.699 700.462 231.669 700.432 231.34C700.432 231.31 700.372 231.251 700.341 231.251C700.009 231.221 699.979 231.46 699.949 231.699C699.677 231.699 699.466 231.759 699.345 231.998ZM695.392 234.659C694.969 234.689 694.667 234.898 694.486 235.257C694.275 235.317 694.003 235.347 694.034 235.646C694.034 235.675 694.094 235.735 694.124 235.735C694.426 235.765 694.486 235.526 694.547 235.287C694.969 235.287 695.392 235.227 695.452 234.689C695.694 234.689 695.905 234.629 696.056 234.39C696.478 234.36 696.78 234.151 696.961 233.792C697.172 233.732 697.444 233.732 697.414 233.403C697.414 233.373 697.354 233.314 697.323 233.314C696.991 233.284 696.961 233.523 696.931 233.762C696.508 233.762 696.086 233.792 696.026 234.36C695.754 234.39 695.543 234.45 695.392 234.659ZM698.349 232.955C698.319 232.865 698.319 232.745 698.259 232.716C698.199 232.686 698.078 232.716 698.017 232.775C697.927 232.895 697.957 233.044 698.138 233.044C698.168 233.074 698.259 233.015 698.349 232.955Z"
+                    fill="#E6E3D6" />
+                <path
+                    d="M764.566 171.904C759.586 175.581 754.606 179.259 749.596 182.936C741.689 188.736 733.752 194.477 725.844 200.277C725.12 200.815 724.697 200.875 723.943 200.307C711.267 190.949 698.561 181.651 685.855 172.322C685.704 172.203 685.584 172.053 685.433 171.904C701.911 171.904 718.39 171.874 734.898 171.874C744.767 171.904 754.667 171.904 764.566 171.904Z"
+                    fill="#F6F4EC" />
+                <path
+                    d="M760.914 239.771C759.918 238.456 758.409 237.798 757.111 236.901C746.88 229.815 736.589 222.789 726.357 215.734C725.935 215.435 725.331 215.255 725.241 214.597C726.146 213.491 727.444 212.893 728.591 212.116C739.637 204.552 750.713 197.048 761.789 189.513C761.789 206.346 761.789 223.178 761.819 240.01C761.518 239.981 761.216 239.861 760.914 239.771Z"
+                    fill="#B6B5AC" />
+                <path
+                    d="M761.85 240.07C761.85 223.238 761.85 206.405 761.819 189.573C765.139 187.211 768.429 184.879 771.749 182.517C772.02 182.308 772.292 182.069 772.684 182.069C772.714 187.6 772.745 193.101 772.745 198.632C772.745 209.425 772.745 220.218 772.745 231.011C772.745 231.759 772.745 232.506 772.714 233.253C772.533 236.961 770.723 239.054 767.101 239.741C765.35 240.07 763.6 240.279 761.85 240.07Z"
+                    fill="#B13A30" />
+                <path
+                    d="M689.115 239.203C688.904 239.502 688.692 239.771 688.481 240.07C688.27 240.07 688.089 240.07 687.877 240.1C687.877 239.891 687.908 239.681 687.908 239.472C688.3 239.353 688.662 239.263 689.054 239.143L689.115 239.203Z"
+                    fill="#C1C0B6" />
+                <path
+                    d="M690.563 237.947C691.318 237.021 692.344 236.512 693.431 236.064C692.646 236.931 691.891 237.828 690.624 238.007L690.563 237.947Z"
+                    fill="#C1C0B6" />
+                <path
+                    d="M690.624 238.007C690.352 238.725 689.748 238.994 689.115 239.203L689.054 239.144C689.296 238.426 689.929 238.157 690.563 237.948C690.563 237.948 690.624 238.007 690.624 238.007Z"
+                    fill="#C1C0B6" />
+                <path
+                    d="M707.193 226.616C707.162 227.185 706.649 227.274 706.287 227.513C706.287 227.424 706.287 227.304 706.287 227.214C706.468 226.826 706.77 226.616 707.193 226.616Z"
+                    fill="#C5C3B9" />
+                <path
+                    d="M701.428 230.503C701.609 230.114 701.911 229.905 702.334 229.905L702.364 229.935C702.364 230.323 702.153 230.503 701.76 230.533C701.67 230.503 701.549 230.503 701.428 230.503Z"
+                    fill="#C3C2B8" />
+                <path
+                    d="M696.962 233.822C696.781 234.21 696.479 234.39 696.057 234.42L696.026 234.39C696.087 233.822 696.509 233.792 696.932 233.792L696.962 233.822Z"
+                    fill="#C1C0B6" />
+                <path
+                    d="M694.486 235.257C694.667 234.898 694.969 234.689 695.392 234.659L695.422 234.719C695.362 235.287 694.969 235.317 694.517 235.317L694.486 235.257Z"
+                    fill="#C1C0B6" />
+                <path
+                    d="M699.919 231.669C699.949 231.43 700.009 231.191 700.311 231.22C700.341 231.22 700.402 231.28 700.402 231.31C700.402 231.639 700.16 231.639 699.949 231.699L699.919 231.669Z"
+                    fill="#C1C0B6" />
+                <path
+                    d="M699.346 232.028C699.316 232.267 699.285 232.506 698.953 232.476C698.923 232.476 698.863 232.416 698.863 232.386C698.863 232.028 699.104 232.028 699.346 232.028C699.346 232.028 699.346 231.998 699.346 232.028Z"
+                    fill="#C1C0B6" />
+                <path
+                    d="M698.35 232.955C698.289 232.985 698.199 233.074 698.138 233.074C697.987 233.044 697.927 232.925 698.018 232.805C698.048 232.745 698.199 232.715 698.259 232.745C698.289 232.775 698.319 232.865 698.35 232.955Z"
+                    fill="#C1C0B6" />
+                <path
+                    d="M696.901 233.762C696.931 233.523 696.991 233.313 697.293 233.313C697.323 233.313 697.384 233.373 697.384 233.403C697.414 233.732 697.142 233.732 696.931 233.792C696.961 233.821 696.901 233.762 696.901 233.762Z"
+                    fill="#C1C0B6" />
+                <path
+                    d="M694.547 235.317C694.487 235.556 694.457 235.765 694.125 235.765C694.094 235.765 694.034 235.705 694.034 235.675C694.004 235.346 694.275 235.346 694.487 235.287C694.487 235.257 694.547 235.317 694.547 235.317Z"
+                    fill="#C1C0B6" />
+                <path
+                    d="M704.778 228.41C704.808 228.171 704.838 227.932 705.17 227.962C705.2 227.962 705.261 228.022 705.261 228.051C705.261 228.38 705.019 228.38 704.778 228.41Z"
+                    fill="#C3C2B8" />
+                <path
+                    d="M708.098 226.018C708.219 225.779 708.46 225.719 708.702 225.719C708.581 225.959 708.37 226.018 708.098 226.018Z"
+                    fill="#C5C3B9" />
+                <path
+                    d="M707.796 226.317C707.676 226.556 707.434 226.616 707.193 226.616L707.163 226.586C707.313 226.377 707.525 226.317 707.796 226.317Z"
+                    fill="#C5C3B9" />
+                <path
+                    d="M703.27 229.307C703.39 229.068 703.632 229.008 703.873 229.008L703.903 229.038C703.752 229.247 703.541 229.307 703.27 229.307C703.27 229.307 703.27 229.337 703.27 229.307Z"
+                    fill="#C3C2B8" />
+                <path
+                    d="M702.364 229.905C702.484 229.666 702.726 229.606 702.967 229.606L702.998 229.636C702.847 229.875 702.635 229.905 702.364 229.905Z"
+                    fill="#C3C2B8" />
+                <path
+                    d="M701.428 230.503C701.549 230.503 701.67 230.503 701.76 230.503C701.609 230.742 701.398 230.802 701.157 230.802L701.126 230.772C701.247 230.682 701.338 230.593 701.428 230.503Z"
+                    fill="#C1C0B6" />
+                <path
+                    d="M699.949 231.699C699.828 231.938 699.587 231.998 699.346 231.998L699.315 231.968C699.436 231.729 699.678 231.669 699.919 231.669L699.949 231.699Z"
+                    fill="#C1C0B6" />
+                <path
+                    d="M695.392 234.659C695.512 234.42 695.754 234.36 695.995 234.36L696.025 234.39C695.905 234.629 695.663 234.689 695.422 234.689C695.452 234.719 695.392 234.659 695.392 234.659Z"
+                    fill="#C1C0B6" />
+                <path
+                    d="M704.778 228.41C704.658 228.649 704.446 228.709 704.175 228.709C704.296 228.44 704.507 228.41 704.778 228.41Z"
+                    fill="#C3C2B8" />
+                <path
+                    d="M708.702 225.719C708.762 225.69 708.792 225.63 708.853 225.6C708.792 225.63 708.762 225.69 708.702 225.719Z"
+                    fill="#C5C3B9" />
+                <path
+                    d="M708.098 226.018C708.008 226.108 707.887 226.228 707.796 226.317L707.766 226.287C707.887 226.198 707.977 226.108 708.098 226.018Z"
+                    fill="#C5C3B9" />
+                <path
+                    d="M706.287 227.214C706.287 227.304 706.287 227.424 706.287 227.513C706.197 227.513 706.106 227.543 705.985 227.513C706.076 227.394 706.166 227.304 706.287 227.214Z"
+                    fill="#C3C2B8" />
+                <path
+                    d="M705.985 227.513C705.925 227.543 705.895 227.603 705.834 227.633C705.895 227.603 705.925 227.543 705.985 227.513Z"
+                    fill="#C3C2B8" />
+                <path
+                    d="M702.967 229.606C703.058 229.516 703.179 229.397 703.269 229.307L703.299 229.337C703.179 229.427 703.088 229.516 702.967 229.606Z"
+                    fill="#C3C2B8" />
+                <path
+                    d="M701.156 230.802C701.096 230.832 701.066 230.892 701.005 230.921C701.066 230.892 701.096 230.832 701.156 230.802Z"
+                    fill="#C1C0B6" />
+                <path
+                    d="M704.175 228.709C704.084 228.799 703.963 228.919 703.873 229.008L703.843 228.978C703.963 228.889 704.054 228.799 704.175 228.709Z"
+                    fill="#C3C2B8" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M277 281C318.421 281 352 247.421 352 206C352 164.579 318.421 131 277 131C235.579 131 202 164.579 202 206C202 247.421 235.579 281 277 281Z"
+                    fill="#007EBB" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M324.917 249.75H306.082V217.67C306.082 208.875 302.74 203.96 295.778 203.96C288.205 203.96 284.249 209.075 284.249 217.67V249.75H266.097V188.639H284.249V196.871C284.249 196.871 289.706 186.772 302.674 186.772C315.637 186.772 324.917 194.687 324.917 211.058V249.75ZM244.443 180.637C238.26 180.637 233.25 175.588 233.25 169.36C233.25 163.133 238.26 158.083 244.443 158.083C250.625 158.083 255.633 163.133 255.633 169.36C255.633 175.588 250.625 180.637 244.443 180.637ZM235.07 249.75H253.997V188.639H235.07V249.75Z"
+                    fill="white" />
+                <circle cx="503" cy="208" r="75" fill="#D9D9D9" />
+                <path
+                    d="M503 131C461.588 131 428 165.43 428 207.896C428 241.871 449.487 270.694 479.294 280.864C483.037 281.575 484.25 279.191 484.25 277.167V262.851C463.387 267.503 459.044 253.777 459.044 253.777C455.631 244.889 450.713 242.525 450.713 242.525C443.906 237.751 451.231 237.853 451.231 237.853C458.763 238.392 462.725 245.78 462.725 245.78C469.413 257.532 480.269 254.136 484.55 252.169C485.219 247.203 487.163 243.806 489.313 241.89C472.656 239.936 455.144 233.342 455.144 203.885C455.144 195.484 458.075 188.627 462.869 183.244C462.094 181.303 459.525 173.479 463.6 162.893C463.6 162.893 469.9 160.829 484.231 170.774C490.212 169.07 496.625 168.218 503 168.186C509.375 168.218 515.794 169.07 521.787 170.774C536.106 160.829 542.394 162.893 542.394 162.893C546.475 173.485 543.906 181.309 543.131 183.244C547.944 188.627 550.85 195.49 550.85 203.885C550.85 233.419 533.306 239.923 516.606 241.826C519.294 244.21 521.75 248.888 521.75 256.065V277.167C521.75 279.211 522.95 281.614 526.756 280.858C556.537 270.675 578 241.858 578 207.896C578 165.43 544.419 131 503 131Z"
+                    fill="black" />
+            </svg>
+
+            <svg id="contactForm" width="1000" height="1000" viewBox="0 0 1000 1000" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect id="contactRectangle1" x="2.5" y="502.5" width="995" height="495" fill="#9F9F9F" stroke="black"
+                    stroke-width="5" />
+                <mask id="path-2-inside-1_91_29" fill="white">
+                    <path d="M0 499.987L499.987 -1.44094e-05L1000 500.013L500.013 1000L0 499.987Z" />
+                </mask>
+                <path id="contactPart1" d="M0 499.987L499.987 -1.44094e-05L1000 500.013L500.013 1000L0 499.987Z"
+                    fill="#CACACA" />
+                <path
+                    d="M0 499.987L-3.53553 496.452L-4.94975 497.866L-1.41421 501.402L0 499.987ZM499.987 -1.44094e-05L503.523 -3.53555L499.987 -7.07108L496.452 -3.53555L499.987 -1.44094e-05ZM1000 500.013L1001.41 501.427L1004.95 497.891L1003.54 496.477L1000 500.013ZM500.013 1000L498.598 1001.41L500.013 1002.83L501.427 1001.41L500.013 1000ZM3.53553 503.523L503.523 3.53552L496.452 -3.53555L-3.53553 496.452L3.53553 503.523ZM496.452 3.53552L996.464 503.548L1003.54 496.477L503.523 -3.53555L496.452 3.53552ZM998.586 498.598L498.598 998.586L501.427 1001.41L1001.41 501.427L998.586 498.598ZM501.427 998.586L1.41421 498.573L-1.41421 501.402L498.598 1001.41L501.427 998.586Z"
+                    fill="black" mask="url(#path-2-inside-1_91_29)" />
+                <line x1="4" y1="502" x2="996" y2="502" stroke="black" stroke-width="2" />
+                <rect id="contactRectangle2" x="250" y="278" width="500" height="700" fill="#F0F0F0" />
+                <text id="contactText1" fill="black" xml:space="preserve" style="white-space: pre"
+                    font-family="Oleo Script" font-size="88" letter-spacing="0em">
+                    <tspan onclick="contactForm(1)" x="290.219" y="380.5">Contact Me</tspan>
+                </text>
+                <rect id="contactRectangle3" x="301" y="622" width="398" height="198" rx="9" fill="#D9D9D9"
+                    stroke="#B4B4B4" stroke-width="2" />
+                <mask id="path-8-inside-2_91_29" fill="white">
+                    <path d="M0 700H1000V1000H0V700Z" />
+                </mask>
+                <path id="contactPart2" d="M0 700H1000V1000H0V700Z" fill="#9F9F9F" />
+                <path
+                    d="M1000 1000V1005H1005V1000H1000ZM0 1000H-5V1005H0V1000ZM995 700V1000H1005V700H995ZM1000 995H0V1005H1000V995ZM5 1000V700H-5V1000H5Z"
+                    fill="black" mask="url(#path-8-inside-2_91_29)" />
+                <rect x="200" y="700" width="600" height="2" fill="black" />
+                <line y1="-1" x2="349.185" y2="-1" transform="matrix(-0.552716 0.83337 0.83337 0.552716 200 700)"
+                    stroke="black" stroke-width="2" />
+                <line x1="797.833" y1="700.447" x2="990.833" y2="991.447" stroke="black" stroke-width="2" />
+                <rect id="contactRectangle4" x="301" y="444" width="398" height="48" rx="9" fill="#D9D9D9"
+                    stroke="#B4B4B4" stroke-width="2" />
+                <rect id="contactRectangle5" x="301" y="533" width="398" height="48" rx="9" fill="#D9D9D9"
+                    stroke="#B4B4B4" stroke-width="2" />
+                <rect id="contactRectangle6" x="300" y="400" width="400" height="5" fill="#585858" />
+                <text id="contactText2" fill="black" xml:space="preserve" style="white-space: pre"
+                    font-family="Oleo Script" font-size="24" letter-spacing="0em">
+                    <tspan x="310" y="438">Name</tspan>
+                </text>
+                <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Oleo Script"
+                    font-size="24" letter-spacing="0em">
+                    <tspan id="contactText3" x="310" y="527">E-mail</tspan>
+                </text>
+                <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Oleo Script"
+                    font-size="24" letter-spacing="0em">
+                    <tspan id="contactText4" x="310" y="616">Message</tspan>
+                </text>
+            </svg>
+
+            <svg id="nav4" width="170" height="616" viewBox="0 0 170 616" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect id="nav4Rectangle1" x="150" y="16" width="20" height="600" fill="#656565" />
+                <path id="nav4Triangle1" d="M160 0L170 16H150L160 0Z" fill="#656565" />
+                <rect onclick="doScrolling(1)" class="navHover" id="nav4Rectangle2" x="33.6411" y="26.8194"
+                    width="116.359" height="39.0826" fill="#959595" />
+                <path id="nav4Triangle2" d="M34.6613 26.9052L34.6613 65.902L-2.6637e-05 44.4485L34.6613 26.9052Z"
+                    fill="#959595" />
+                <text id="nav4Text1" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
+                    <tspan x="58.8635" y="55.088">Home</tspan>
+                </text>
+                <rect onclick="doScrolling(2)" class="navHover" id="nav4Rectangle3" x="33.6411" y="76.8194"
+                    width="116.359" height="39.0826" fill="#959595" />
+                <path id="nav4Triangle3" d="M34.6613 76.9052L34.6613 115.902L-2.6637e-05 94.4485L34.6613 76.9052Z"
+                    fill="#959595" />
+                <text id="nav4Text2" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
+                    <tspan x="43.9102" y="105.227">Projects</tspan>
+                </text>
+                <rect onclick="doScrolling(3)" class="navHover" id="nav4Rectangle4" x="33.6411" y="126.819"
+                    width="116.359" height="39.0826" fill="#959595" />
+                <path id="nav4Triangle4" d="M34.6613 126.905L34.6613 165.902L-2.6637e-05 144.448L34.6613 126.905Z"
+                    fill="#959595" />
+                <text id="nav4Text3" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
+                    <tspan x="55.9453" y="155.227">About</tspan>
+                </text>
+                <rect onclick="doScrolling(4)" class="navHover" id="nav4Rectangle5" x="33.6411" y="176.819"
+                    width="116.359" height="39.0826" fill="#959595" />
+                <path id="nav4Triangle5" d="M34.6613 176.905L34.6613 215.902L-2.6637e-05 194.448L34.6613 176.905Z"
+                    fill="#959595" />
+                <text id="nav4Text4" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
+                    <tspan x="44.9062" y="205.227">Contact</tspan>
+                </text>
+            </svg>
+        </div>
+
+        <div id="floor"></div>
+    </div>
+</body>
+
+</html>

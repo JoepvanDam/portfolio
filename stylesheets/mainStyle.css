@@ -1,0 +1,258 @@
+html {
+    height: 100vh;
+    scroll-behavior: smooth;
+    background-color: rgb(0, 0, 0);
+}
+
+body {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-family: Arial;
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar { height: 20px; width: 0; }
+::-webkit-scrollbar-track { background: rgb(80, 80, 80); }
+::-webkit-scrollbar-thumb { background: rgb(40, 40, 40); }
+::-webkit-scrollbar-thumb:hover { background: rgb(20, 20, 20); }
+
+#darkmodeWrapper {
+    position: fixed;
+    padding: 1vw;
+    margin: 0;
+    top: 3vw;
+    left: 3vw;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50px;
+    background-color: rgba(50, 50, 50, 0.1);
+    z-index: 1;
+}
+
+#languageWrapper {
+    position: fixed;
+    padding: 1vw;
+    margin: 0;
+    top: 3vw;
+    right: 3vw;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50px;
+    background-color: rgba(50, 50, 50, 0.1);
+    z-index: 1;
+}
+
+#darkmodeImgSun, #darkmodeImgMoon {
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    height: 5vw;
+    width: 5vw;
+    transition: all 0.5s, left 1s, top 1s, opacity 0s;
+}
+
+#darkmodeImgMoon {
+    top: 100vh;
+    left: -10vw;
+    opacity: 0;
+}
+
+#languageImg {
+    height: 5vw;
+    width: 5vw;
+    transition: 0.5s;
+}
+
+#darkmodeImgSun:hover, #darkmodeImgMoon:hover, #languageImg:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#progressBar {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    height: 20px; 
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+#progress {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 20px;
+    background-color: rgb(50, 100, 150);
+    transition: 0.1s;
+}
+
+#fullPage {
+    position: absolute;
+    display: grid;
+    height: 100vh;
+    width: 400vw;
+    grid-template-rows: 100vh;
+    grid-template-columns: repeat(100vw, 4);
+    background-color: #9BBDD1;
+    transition: 2.5s;
+}
+
+.part {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+}
+
+#part1 { left: 0; }
+#littleHouse {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 40px;
+    left: 27.5%;
+    width: 40vw;
+    height: auto;
+    pointer-events: none;
+    z-index: 2;
+}
+
+#homeRectangle, #chimneyRectangle, #roofTriangle, #doorRectangle, #homeWindow, #doorKnob, #smoke1, #smoke2, #smoke3, #smoke4 { transition: 2s; }
+#smoke1, #smoke2, #smoke3, #smoke4 { opacity: 0; }
+
+#nav1 {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 40px;
+    right: 5%;
+}
+
+#nav1Rectangle1, #nav1Rectangle2, #nav1Rectangle3, #nav1Rectangle4, #nav1Rectangle5, #nav1Triangle1, #nav1Triangle2, #nav1Triangle3, #nav1Triangle4, #nav1Triangle5, #nav1Text1, #nav1Text2, #nav1Text3, #nav1Text4 { transition: all 2s, transform 0s; }
+#nav1Lamp, #nav1Light { transition: 0.25s; pointer-events: none; }
+
+#part2 { left: 100vw; }
+#littleOffice {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 40px;
+    left: 27.5%;
+    width: 40vw;
+    height: auto;
+    pointer-events: none;
+    z-index: 2;
+}
+
+#officeRectangle, #frontBoardRectangle, #frontBoardText, #window1, #window2, #window3, #window4, #window5, #window6, #window7, #window8, #window9, #behindDoor, #doorLeft, #doorRight { transition: 2s; }
+
+#nav2 {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 40px;
+    right: 5%;
+}
+
+#nav2Rectangle1, #nav2Rectangle2, #nav2Rectangle3, #nav2Rectangle4, #nav2Rectangle5, #nav2Triangle1, #nav2Triangle2, #nav2Triangle3, #nav2Triangle4, #nav2Triangle5, #nav2Text1, #nav2Text2, #nav2Text3, #nav2Text4 { transition: all 2s, transform 0s; }
+
+#part3 { left: 200vw; }
+#atcTower {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 40px;
+    right: 15%;
+    filter: saturate(0);
+    user-select: none;
+    z-index: 2;
+}
+
+#atcTower { transition: 2s; }
+
+#nav3 {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 40px;
+    right: 5%;
+}
+
+#nav3Rectangle1, #nav3Rectangle2, #nav3Rectangle3, #nav3Rectangle4, #nav3Rectangle5, #nav3Triangle1, #nav3Triangle2, #nav3Triangle3, #nav3Triangle4, #nav3Triangle5, #nav3Text1, #nav3Text2, #nav3Text3, #nav3Text4 { transition: all 2s, transform 0s; }
+
+#part4 { left: 300vw; }
+#littleBillboard {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 40px;
+    left: 25%;
+    width: 50vw;
+    height: auto;
+    z-index: 2;
+}
+
+#billboardSupportLeft, #billboardSupportRight, #aboveBillboard, #billboardRectangle, #billboardSupportLeftStand, #billboardSupportRightStand { transition: 2s; }
+#billboardLight1, #billboardLight2, #billboardLight3, #billboardLight4, #billboardLight5 { transition: 0.25s; }
+
+#contactForm {
+    position: absolute;
+    display: none;
+    padding: 0;
+    margin: 0;
+    bottom: 100px;
+    left: 30%;
+    width: 40vw;
+    height: auto;
+    opacity: 0;
+    transition: 2s;
+    z-index: 3;
+}
+
+#contactText1, #contactText2, #contactText3, #contactText4, #contactRectangle1, #contactRectangle2, #contactRectangle3, #contactRectangle4, #contactRectangle5, #contactRectangle6, #contactPart1, #contactPart2 { transition: 2s; }
+
+#nav4 {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 40px;
+    right: 5%;
+}
+
+#nav4Rectangle1, #nav4Rectangle2, #nav4Rectangle3, #nav4Rectangle4, #nav4Rectangle5, #nav4Triangle1, #nav4Triangle2, #nav4Triangle3, #nav4Triangle4, #nav4Triangle5, #nav4Text1, #nav4Text2, #nav4Text3, #nav4Text4 { transition: all 2s, transform 0s; }
+
+#floor {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 400vw;
+    background: rgb(100, 100, 100); 
+    transition: 2s;
+    z-index: 1;
+}
+
+.navHover {
+    transition: all 2s, filter 0.2s !important;
+}
+
+.navHover:hover {
+    filter: brightness(1.25);
+    cursor: pointer;
+}
+
+text {
+    pointer-events: none;
+}
+
