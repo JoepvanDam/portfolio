@@ -15,11 +15,12 @@ function darkmodeSwitch() {
     if (running == false) {
         running = true;
         if (darkmode == true) {
-            // Full Page & sun/moon
-            document.getElementById("darkmodeWrapper").style.backgroundColor = "rgba(50, 50, 50, 0.1)";
-            document.getElementById("languageWrapper").style.backgroundColor = "rgba(50, 50, 50, 0.1)";
+            // Full Page
             document.getElementById("fullPage").style.backgroundColor = "#9BBDD1";
             document.getElementById("floor").style.backgroundColor = "#5A5A5A";
+            document.getElementById("progress").style.backgroundColor = "rgb(50, 100, 150)";
+            document.getElementById("darkmodeCheckbox").disabled = true;
+            document.getElementById("darkmodeSwitch").style.filter = "brightness(0.5)";
 
             // Moon leaves, sun enters
             document.getElementById("darkmodeImgMoon").style.left = "100vw";
@@ -29,6 +30,9 @@ function darkmodeSwitch() {
             setTimeout(() => { document.getElementById("darkmodeImgSun").style.left = "1vw"; }, 500);
             setTimeout(() => { document.getElementById("darkmodeImgMoon").style.left = "1vw"; }, 800);
             setTimeout(() => { document.getElementById("darkmodeImgMoon").style.opacity = "0"; }, 800);
+
+            // Nav lights
+            setTimeout(() => { document.getElementById("lampPaint").setAttribute("y2", "28"); }, 250);
 
             // Nav 1
             document.getElementById("nav1Rectangle1").setAttribute("fill", "#656565");
@@ -45,10 +49,8 @@ function darkmodeSwitch() {
             document.getElementById("nav1Text2").setAttribute("fill", "#000000");
             document.getElementById("nav1Text3").setAttribute("fill", "#000000");
             document.getElementById("nav1Text4").setAttribute("fill", "#000000");
-
-            // Nav 1 lamp
             setTimeout(() => { document.getElementById("nav1Lamp").setAttribute("fill", "#8D8D8D"); }, 200);
-            setTimeout(() => { document.getElementById("lampPaint").setAttribute("y2", "28"); }, 250);
+            
 
             // Nav 2
             document.getElementById("nav2Rectangle1").setAttribute("fill", "#656565");
@@ -65,6 +67,7 @@ function darkmodeSwitch() {
             document.getElementById("nav2Text2").setAttribute("fill", "#000000");
             document.getElementById("nav2Text3").setAttribute("fill", "#000000");
             document.getElementById("nav2Text4").setAttribute("fill", "#000000");
+            setTimeout(() => { document.getElementById("nav2Lamp").setAttribute("fill", "#8D8D8D"); }, 200);
 
             // Nav 3
             document.getElementById("nav3Rectangle1").setAttribute("fill", "#656565");
@@ -81,6 +84,7 @@ function darkmodeSwitch() {
             document.getElementById("nav3Text2").setAttribute("fill", "#000000");
             document.getElementById("nav3Text3").setAttribute("fill", "#000000");
             document.getElementById("nav3Text4").setAttribute("fill", "#000000");
+            setTimeout(() => { document.getElementById("nav3Lamp").setAttribute("fill", "#8D8D8D"); }, 200);
 
             // Nav 4
             document.getElementById("nav4Rectangle1").setAttribute("fill", "#656565");
@@ -97,6 +101,7 @@ function darkmodeSwitch() {
             document.getElementById("nav4Text2").setAttribute("fill", "#000000");
             document.getElementById("nav4Text3").setAttribute("fill", "#000000");
             document.getElementById("nav4Text4").setAttribute("fill", "#000000");
+            setTimeout(() => { document.getElementById("nav4Lamp").setAttribute("fill", "#8D8D8D"); }, 200);
     
             // Home | House
             document.getElementById("homeRectangle").setAttribute("fill", "#7C7C7C");
@@ -157,15 +162,17 @@ function darkmodeSwitch() {
             document.getElementById("contactPart1").setAttribute("fill", "#CACACA");
             document.getElementById("contactPart2").setAttribute("fill", "#9F9F9F");
     
+            setTimeout(() => { document.getElementById("darkmodeCheckbox").disabled = false; document.getElementById("darkmodeSwitch").style.filter = ""; }, 2800);
             setTimeout(() => { darkmode = false; running = false; }, 2800);
         } 
         
         else if (darkmode == false) {
             // Full Page
-            document.getElementById("darkmodeWrapper").style.backgroundColor = "rgba(200, 200, 200, 0.1)";
-            document.getElementById("languageWrapper").style.backgroundColor = "rgba(200, 200, 200, 0.1)";
             document.getElementById("fullPage").style.backgroundColor = "#292647";
             document.getElementById("floor").style.backgroundColor = "#161616";
+            document.getElementById("progress").style.backgroundColor = "rgb(50, 50, 100)";
+            document.getElementById("darkmodeCheckbox").disabled = true;
+            document.getElementById("darkmodeSwitch").style.filter = "brightness(0.5)";
 
             // Sun leaves, moon enters
             document.getElementById("darkmodeImgSun").style.left = "100vw";
@@ -175,6 +182,15 @@ function darkmodeSwitch() {
             setTimeout(() => { document.getElementById("darkmodeImgMoon").style.left = "1vw"; }, 500);
             setTimeout(() => { document.getElementById("darkmodeImgSun").style.left = "-10vw"; }, 800);
             setTimeout(() => { document.getElementById("darkmodeImgSun").style.opacity = "0"; }, 800);
+
+            // Nav lights
+            setTimeout(() => {
+                let frame = 28;
+                const id = setInterval(() => {
+                    if (frame < 680) { frame = frame + 30; document.getElementById("lampPaint").setAttribute("y2", frame); } 
+                    else { clearInterval(id); }
+                }, 1);
+            }, 1200);
 
             // Nav 1
             document.getElementById("nav1Rectangle1").setAttribute("fill", "#2C2C2C");
@@ -191,16 +207,7 @@ function darkmodeSwitch() {
             document.getElementById("nav1Text2").setAttribute("fill", "#FFFFFF");
             document.getElementById("nav1Text3").setAttribute("fill", "#FFFFFF");
             document.getElementById("nav1Text4").setAttribute("fill", "#FFFFFF");
-
-            // Nav 1 lamp
             setTimeout(() => { document.getElementById("nav1Lamp").setAttribute("fill", "#E4C590"); }, 1100);
-            setTimeout(() => {
-                let frame = 28;
-                const id = setInterval(() => {
-                    if (frame < 680) { frame = frame + 30; document.getElementById("lampPaint").setAttribute("y2", frame); } 
-                    else { clearInterval(id); }
-                }, 1);
-            }, 1200);
 
             // Nav 2
             document.getElementById("nav2Rectangle1").setAttribute("fill", "#2C2C2C");
@@ -217,6 +224,7 @@ function darkmodeSwitch() {
             document.getElementById("nav2Text2").setAttribute("fill", "#FFFFFF");
             document.getElementById("nav2Text3").setAttribute("fill", "#FFFFFF");
             document.getElementById("nav2Text4").setAttribute("fill", "#FFFFFF");
+            setTimeout(() => { document.getElementById("nav2Lamp").setAttribute("fill", "#E4C590"); }, 1100);
 
             // Nav 3
             document.getElementById("nav3Rectangle1").setAttribute("fill", "#2C2C2C");
@@ -233,6 +241,7 @@ function darkmodeSwitch() {
             document.getElementById("nav3Text2").setAttribute("fill", "#FFFFFF");
             document.getElementById("nav3Text3").setAttribute("fill", "#FFFFFF");
             document.getElementById("nav3Text4").setAttribute("fill", "#FFFFFF");
+            setTimeout(() => { document.getElementById("nav3Lamp").setAttribute("fill", "#E4C590"); }, 1100);
 
             // Nav 4
             document.getElementById("nav4Rectangle1").setAttribute("fill", "#2C2C2C");
@@ -249,6 +258,7 @@ function darkmodeSwitch() {
             document.getElementById("nav4Text2").setAttribute("fill", "#FFFFFF");
             document.getElementById("nav4Text3").setAttribute("fill", "#FFFFFF");
             document.getElementById("nav4Text4").setAttribute("fill", "#FFFFFF");
+            setTimeout(() => { document.getElementById("nav4Lamp").setAttribute("fill", "#E4C590"); }, 1100);
     
             // Home | House
             document.getElementById("homeRectangle").setAttribute("fill", "#4D4D4D");
@@ -316,22 +326,28 @@ function darkmodeSwitch() {
             document.getElementById("contactPart1").setAttribute("fill", "#414141");
             document.getElementById("contactPart2").setAttribute("fill", "#292929");
 
+            setTimeout(() => { document.getElementById("darkmodeCheckbox").disabled = false; document.getElementById("darkmodeSwitch").style.filter = ""; }, 3400);
             setTimeout(() => { darkmode = true; running = false; }, 3400);
         }
     }
 }
 
 
-let english = true;
-function languageSwitch() {
-    if (english == true) {
-        document.getElementById("languageImg").src = './images/flagNL.svg';
-
-        english = false;
-    } else if (english == false) {
-        document.getElementById("languageImg").src = './images/flagEN.svg';
-
-        english = true;
+function settings(openClose) {
+    if (openClose == 0) {
+        document.getElementById("settingBox").style.height = "80vh";
+        document.getElementById("settingBox").style.width = "500px";
+        setTimeout(() => {
+            document.getElementById("settingItems").style.opacity = "1";
+            document.getElementById("settingItems").style.pointerEvents = "all";
+        }, 500);
+    } else if (openClose == 1) {
+        document.getElementById("settingItems").style.opacity = "0";
+        document.getElementById("settingItems").style.pointerEvents = "none";
+        setTimeout(() => {
+            document.getElementById("settingBox").style.height = "0";
+            document.getElementById("settingBox").style.width = "0";
+        }, 500);
     }
 }
 
@@ -354,5 +370,3 @@ function contactForm(openClose) {
         setTimeout(() => { document.getElementById("contactForm").style.display = "none"; }, 1000);
     }
 }
-
-
