@@ -15,15 +15,72 @@
     <div id="fullPage">
 
         <div id="top">
+            <div id="progressBar">
+                <div id="progress"></div>
+            </div>
+
             <div id="darkmodeWrapper">
                 <img id="darkmodeImgSun" src="./images/sun.svg" onclick="darkmodeSwitch()">
                 <img id="darkmodeImgMoon" src="./images/moon.svg" onclick="darkmodeSwitch()">
             </div>
-            <div id="languageWrapper"><img id="languageImg" src="./images/flagEN.svg" onclick="languageSwitch()"></div>
 
-            <div id="progressBar">
-                <div id="progress"></div>
+            <div id="settingsWrapper">
+                <img id="settingImg" src="./images/settingGear.svg" onclick="settings(0)">
+                <div id="settingBox">
+                    <div id="settingItems">
+                        <img id="settingImg2" src="./images/settingGear2.svg" onclick="settings(1)">
+                        <div class="settingItem">
+                            <img class="settingFlag" src="./images/flagEN.svg">
+                            <img class="settingFlag" src="./images/flagNL.svg">
+                        </div>
+                        <div class="settingItem">
+                            <h1 class="settingText"><img src="./images/sun.svg">Darkmode OFF</h1>
+                            <label class="switch" id="darkmodeSwitch">
+                                <input id="darkmodeCheckbox" type="checkbox" onclick="darkmodeSwitch()">
+                                <span class="slider round"></span>
+                            </label>
+                            <h1 class="settingText"><img src="./images/moon.svg">Darkmode ON</h1>
+                        </div>
+                        <div class="settingItem">
+                            <h1 class="settingText">Animations OFF</h1>
+                            <label class="switch">
+                                <input type="checkbox" checked disabled>
+                                <span class="slider round"></span>
+                            </label>
+                            <h1 class="settingText">Animations ON</h1>
+                        </div>
+                        <div class="settingItem">
+                            <h1 class="settingText">Page Tips<br>OFF</h1>
+                            <label class="switch">
+                                <input type="checkbox" disabled>
+                                <span class="slider round"></span>
+                            </label>
+                            <h1 class="settingText">Page Tips<br>ON</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div id="infoWrapper">
+                <a>
+                    <h1>?</h1>
+                </a>
+            </div>
+
+            <svg id="svgDefs" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="houseLight" cx="0" cy="0" r="0" gradientUnits="userSpaceOnUse"
+                        gradientTransform="translate(436 741) rotate(90) scale(200)">
+                        <stop stop-color="#E4C590" />
+                        <stop offset="1" stop-color="#E4C590" stop-opacity="0" />
+                    </radialGradient>
+                    <linearGradient id="lampPaint" x1="201.351" y1="28" x2="201.351" y2="28"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#E4C590" />
+                        <stop offset="1" stop-color="#E4C590" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+            </svg>
         </div>
 
         <div class="part" id="part1">
@@ -37,6 +94,7 @@
                 <ellipse id="smoke4" rx="43.2812" ry="56.9582"
                     transform="matrix(0.374395 0.92727 -0.928223 0.372025 601.926 61.3232)" fill="#D9D9D9" />
                 <rect id="homeRectangle" x="100" y="461" width="500" height="400" fill="#7C7C7C" />
+                <circle cx="436" cy="741" r="200" fill="url(#houseLight)" fill-opacity="0.5" />
                 <rect id="chimneyRectangle" x="468" y="201.0961" width="50" height="150" fill="#7C7C7C" />
                 <path id="roofTriangle" d="M350 161L653.109 461H46.8911L350 161Z" fill="#616161" />
                 <rect id="doorRectangle" x="158" y="661" width="100" height="200" fill="#ABABAB" />
@@ -45,7 +103,7 @@
                 <text opacity="0.75" fill="white" font-family="Arial" font-size="34" font-weight="600"
                     letter-spacing="0em">
                     <tspan font-size="50" x="32%" y="520">Welcome!</tspan>
-                    <tspan x="38%" y="570">I am Joep,</tspan>
+                    <tspan x="38%" y="567.5">I am Joep,</tspan>
                     <tspan x="20%" y="610">Programmer & IT Student</tspan>
                 </text>
             </svg>
@@ -56,32 +114,28 @@
                     width="116.359" height="39.0826" fill="#959595" />
                 <path id="nav1Triangle2" d="M75.6613 82.9052L75.6613 121.902L41 100.448L75.6613 82.9052Z"
                     fill="#959595" />
-                <text id="nav1Text1" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter"
-                    font-size="24" letter-spacing="0em">
+                <text id="nav1Text1" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
                     <tspan x="99.8635" y="111.088">Home</tspan>
                 </text>
                 <rect class="navHover" onclick="doScrolling(2)" id="nav1Rectangle3" width="116.359" height="39.0826"
                     transform="matrix(-1 0 0 1 327.359 131.819)" fill="#959595" />
                 <path id="nav1Triangle3" d="M326.339 131.905L326.339 170.902L361 149.448L326.339 131.905Z"
                     fill="#959595" />
-                <text id="nav1Text2" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter"
-                    font-size="24" letter-spacing="0em">
+                <text id="nav1Text2" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
                     <tspan x="224.91" y="160.227">Projects</tspan>
                 </text>
                 <rect class="navHover" onclick="doScrolling(3)" id="nav1Rectangle4" width="116.359" height="39.0826"
                     transform="matrix(-1 0 0 1 327.359 181.819)" fill="#959595" />
                 <path id="nav1Triangle4" d="M326.339 181.905L326.339 220.902L361 199.448L326.339 181.905Z"
                     fill="#959595" />
-                <text id="nav1Text3" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter"
-                    font-size="24" letter-spacing="0em">
+                <text id="nav1Text3" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
                     <tspan x="236.945" y="210.227">About</tspan>
                 </text>
                 <rect class="navHover" onclick="doScrolling(4)" id="nav1Rectangle5" width="116.359" height="39.0826"
                     transform="matrix(-1 0 0 1 327.359 231.819)" fill="#959595" />
                 <path id="nav1Triangle5" d="M326.339 231.905L326.339 270.902L361 249.448L326.339 231.905Z"
                     fill="#959595" />
-                <text id="nav1Text4" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter"
-                    font-size="24" letter-spacing="0em">
+                <text id="nav1Text4" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
                     <tspan x="225.906" y="260.227">Contact</tspan>
                 </text>
                 <rect id="nav1Rectangle1" x="191" y="21" width="20" height="650" fill="#656565" />
@@ -91,13 +145,6 @@
                 <path id="nav1Lamp"
                     d="M231 27C231 31.1421 217.345 37 200.5 37C183.655 37 170 31.1421 170 27C170 22.8579 183.655 16 200.5 16C217.345 16 231 22.8579 231 27Z"
                     fill="#8D8D8D" />
-                <defs>
-                    <linearGradient id="lampPaint" x1="201.351" y1="28" x2="201.351" y2="28"
-                        gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#E4C590" />
-                        <stop offset="1" stop-color="#E4C590" stop-opacity="0" />
-                    </linearGradient>
-                </defs>
             </svg>
         </div>
 
@@ -132,77 +179,88 @@
                 <rect id="window9" x="504" y="498" width="150" height="150" fill="#8C9FB6" />
             </svg>
 
-            <svg id="nav2" width="320" height="620" viewBox="0 0 320 620" fill="none"
+            <svg id="nav2" width="403" height="671" viewBox="0 0 403 671" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <rect id="nav2Rectangle1" x="150" y="20" width="20" height="600" fill="#656565" />
-                <path id="nav2Triangle1" d="M160 0L170 20H150L160 0Z" fill="#656565" />
-                <rect onclick="doScrolling(1)" class="navHover" id="nav2Rectangle2" x="33.6412" y="30.8194"
+                <rect class="navHover" onclick="doScrolling(1)" id="nav2Rectangle2" x="74.6411" y="82.8194"
                     width="116.359" height="39.0826" fill="#959595" />
-                <path id="nav2Triangle2" d="M34.6613 30.9052L34.6613 69.902L-2.67354e-05 48.4485L34.6613 30.9052Z"
+                <path id="nav2Triangle2" d="M75.6613 82.9052L75.6613 121.902L41 100.448L75.6613 82.9052Z"
                     fill="#959595" />
                 <text id="nav2Text1" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
-                    <tspan x="58.8636" y="59.088">Home</tspan>
+                    <tspan x="99.8635" y="111.088">Home</tspan>
                 </text>
-                <rect onclick="doScrolling(2)" class="navHover" id="nav2Rectangle3" x="33.6412" y="80.8194"
+                <rect class="navHover" onclick="doScrolling(2)" id="nav2Rectangle3" x="74.6412" y="131.819"
                     width="116.359" height="39.0826" fill="#959595" />
-                <path id="nav2Triangle3" d="M34.6613 80.9052L34.6613 119.902L-2.67354e-05 98.4485L34.6613 80.9052Z"
+                <path id="nav2Triangle3" d="M75.6613 131.905L75.6613 170.902L41 149.448L75.6613 131.905Z"
                     fill="#959595" />
                 <text id="nav2Text2" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
-                    <tspan x="43.9102" y="109.227">Projects</tspan>
+                    <tspan x="87.4102" y="160.227">Projects</tspan>
                 </text>
-                <rect onclick="doScrolling(3)" class="navHover" id="nav2Rectangle4" width="116.359" height="39.0826"
-                    transform="matrix(-1 0 0 1 286.359 130.819)" fill="#959595" />
-                <path id="nav2Triangle4" d="M285.339 130.905L285.339 169.902L320 148.448L285.339 130.905Z"
+                <rect class="navHover" onclick="doScrolling(3)" id="nav2Rectangle4" width="116.359" height="39.0826"
+                    transform="matrix(-1 0 0 1 327.359 181.819)" fill="#959595" />
+                <path id="nav2Triangle4" d="M326.339 181.905L326.339 220.902L361 199.448L326.339 181.905Z"
                     fill="#959595" />
                 <text id="nav2Text3" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
-                    <tspan x="195.945" y="159.227">About</tspan>
+                    <tspan x="234.445" y="210.227">About</tspan>
                 </text>
-                <rect onclick="doScrolling(4)" class="navHover" id="nav2Rectangle5" width="116.359" height="39.0826"
-                    transform="matrix(-1 0 0 1 286.359 180.819)" fill="#959595" />
-                <path id="nav2Triangle5" d="M285.339 180.905L285.339 219.902L320 198.448L285.339 180.905Z"
+                <rect class="navHover" onclick="doScrolling(4)" id="nav2Rectangle5" width="116.359" height="39.0826"
+                    transform="matrix(-1 0 0 1 327.359 231.819)" fill="#959595" />
+                <path id="nav2Triangle5" d="M326.339 231.905L326.339 270.902L361 249.448L326.339 231.905Z"
                     fill="#959595" />
                 <text id="nav2Text4" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
-                    <tspan x="184.906" y="209.227">Contact</tspan>
+                    <tspan x="223.406" y="260.227">Contact</tspan>
                 </text>
+                <rect id="nav2Rectangle1" x="191" y="21" width="20" height="650" fill="#656565" />
+                <path id="nav2Light" d="M199.5 28.7165L229.046 28L402.702 669.25H0L172 28L199.5 28.7165Z"
+                    fill="url(#lampPaint)" fill-opacity="0.25" />
+                <ellipse id="nav2Triangle1" cx="200.338" cy="17" rx="38.5" ry="17" fill="#656565" />
+                <path id="nav2Lamp"
+                    d="M231 27C231 31.1421 217.345 37 200.5 37C183.655 37 170 31.1421 170 27C170 22.8579 183.655 16 200.5 16C217.345 16 231 22.8579 231 27Z"
+                    fill="#8D8D8D" />
             </svg>
+
         </div>
 
         <div class="part" id="part3">
 
             <img id="atcTower" src="./images/airport2.png">
 
-            <svg id="nav3" width="320" height="620" viewBox="0 0 320 620" fill="none"
+            <svg id="nav3" width="403" height="671" viewBox="0 0 403 671" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <rect id="nav3Rectangle1" x="150" y="20" width="20" height="600" fill="#656565" />
-                <path id="nav3Triangle1" d="M160 0L170 20H150L160 0Z" fill="#656565" />
-                <rect onclick="doScrolling(1)" class="navHover" id="nav3Rectangle2" x="33.6411" y="30.8194"
+                <rect class="navHover" onclick="doScrolling(1)" id="nav3Rectangle2" x="74.6411" y="82.8194"
                     width="116.359" height="39.0826" fill="#959595" />
-                <path id="nav3Triangle2" d="M34.6613 30.9052L34.6613 69.902L-2.67354e-05 48.4485L34.6613 30.9052Z"
+                <path id="nav3Triangle2" d="M75.6613 82.9052L75.6613 121.902L41 100.448L75.6613 82.9052Z"
                     fill="#959595" />
                 <text id="nav3Text1" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
-                    <tspan x="58.8635" y="59.088">Home</tspan>
+                    <tspan x="99.8635" y="111.088">Home</tspan>
                 </text>
-                <rect onclick="doScrolling(2)" class="navHover" id="nav3Rectangle3" x="33.6411" y="80.8194"
+                <rect class="navHover" onclick="doScrolling(2)" id="nav3Rectangle3" x="74.6411" y="131.819"
                     width="116.359" height="39.0826" fill="#959595" />
-                <path id="nav3Triangle3" d="M34.6613 80.9052L34.6613 119.902L-2.67354e-05 98.4485L34.6613 80.9052Z"
+                <path id="nav3Triangle3" d="M75.6613 131.905L75.6613 170.902L41 149.448L75.6613 131.905Z"
                     fill="#959595" />
                 <text id="nav3Text2" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
-                    <tspan x="43.9102" y="109.227">Projects</tspan>
+                    <tspan x="87.4102" y="160.227">Projects</tspan>
                 </text>
-                <rect onclick="doScrolling(3)" class="navHover" id="nav3Rectangle4" x="33.6411" y="130.819"
+                <rect class="navHover" onclick="doScrolling(3)" id="nav3Rectangle4" x="74.6411" y="181.819"
                     width="116.359" height="39.0826" fill="#959595" />
-                <path id="nav3Triangle4" d="M34.6613 130.905L34.6613 169.902L-2.67354e-05 148.448L34.6613 130.905Z"
+                <path id="nav3Triangle4" d="M75.6613 181.905L75.6613 220.902L41 199.448L75.6613 181.905Z"
                     fill="#959595" />
                 <text id="nav3Text3" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
-                    <tspan x="55.9453" y="159.227">About</tspan>
+                    <tspan x="99.4453" y="210.227">About</tspan>
                 </text>
-                <rect onclick="doScrolling(4)" class="navHover" id="nav3Rectangle5" width="116.359" height="39.0826"
-                    transform="matrix(-1 0 0 1 286.359 180.819)" fill="#959595" />
-                <path id="nav3Triangle5" d="M285.339 180.905L285.339 219.902L320 198.448L285.339 180.905Z"
+                <rect class="navHover" onclick="doScrolling(4)" id="nav3Rectangle5" width="116.359" height="39.0826"
+                    transform="matrix(-1 0 0 1 327.359 231.819)" fill="#959595" />
+                <path id="nav3Triangle5" d="M326.339 231.905L326.339 270.902L361 249.448L326.339 231.905Z"
                     fill="#959595" />
                 <text id="nav3Text4" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
-                    <tspan x="184.906" y="209.227">Contact</tspan>
+                    <tspan x="223.406" y="260.227">Contact</tspan>
                 </text>
+                <rect id="nav3Rectangle1" x="191" y="21" width="20" height="650" fill="#656565" />
+                <path id="nav2Light" d="M199.5 28.7165L229.046 28L402.702 669.25H0L172 28L199.5 28.7165Z"
+                    fill="url(#lampPaint)" fill-opacity="0.25" />
+                <ellipse id="nav3Triangle1" cx="200.338" cy="17" rx="38.5" ry="17" fill="#656565" />
+                <path id="nav3Lamp"
+                    d="M231 27C231 31.1421 217.345 37 200.5 37C183.655 37 170 31.1421 170 27C170 22.8579 183.655 16 200.5 16C217.345 16 231 22.8579 231 27Z"
+                    fill="#8D8D8D" />
             </svg>
         </div>
 
@@ -412,39 +470,45 @@
                 </text>
             </svg>
 
-            <svg id="nav4" width="170" height="616" viewBox="0 0 170 616" fill="none"
+            <svg id="nav4" width="403" height="671" viewBox="0 0 403 671" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <rect id="nav4Rectangle1" x="150" y="16" width="20" height="600" fill="#656565" />
-                <path id="nav4Triangle1" d="M160 0L170 16H150L160 0Z" fill="#656565" />
-                <rect onclick="doScrolling(1)" class="navHover" id="nav4Rectangle2" x="33.6411" y="26.8194"
+                <rect class="navHover" onclick="doScrolling(1)" id="nav4Rectangle2" x="74.6411" y="82.8194"
                     width="116.359" height="39.0826" fill="#959595" />
-                <path id="nav4Triangle2" d="M34.6613 26.9052L34.6613 65.902L-2.6637e-05 44.4485L34.6613 26.9052Z"
+                <path id="nav4Triangle2" d="M75.6613 82.9052L75.6613 121.902L41 100.448L75.6613 82.9052Z"
                     fill="#959595" />
                 <text id="nav4Text1" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
-                    <tspan x="58.8635" y="55.088">Home</tspan>
+                    <tspan x="99.8635" y="111.088">Home</tspan>
                 </text>
-                <rect onclick="doScrolling(2)" class="navHover" id="nav4Rectangle3" x="33.6411" y="76.8194"
+                <rect class="navHover" onclick="doScrolling(2)" id="nav4Rectangle3" x="74.6411" y="131.819"
                     width="116.359" height="39.0826" fill="#959595" />
-                <path id="nav4Triangle3" d="M34.6613 76.9052L34.6613 115.902L-2.6637e-05 94.4485L34.6613 76.9052Z"
+                <path id="nav4Triangle3" d="M75.6613 131.905L75.6613 170.902L41 149.448L75.6613 131.905Z"
                     fill="#959595" />
                 <text id="nav4Text2" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
-                    <tspan x="43.9102" y="105.227">Projects</tspan>
+                    <tspan x="87.4102" y="160.227">Projects</tspan>
                 </text>
-                <rect onclick="doScrolling(3)" class="navHover" id="nav4Rectangle4" x="33.6411" y="126.819"
+                <rect class="navHover" onclick="doScrolling(3)" id="nav4Rectangle4" x="74.6411" y="181.819"
                     width="116.359" height="39.0826" fill="#959595" />
-                <path id="nav4Triangle4" d="M34.6613 126.905L34.6613 165.902L-2.6637e-05 144.448L34.6613 126.905Z"
+                <path id="nav4Triangle4" d="M75.6613 181.905L75.6613 220.902L41 199.448L75.6613 181.905Z"
                     fill="#959595" />
                 <text id="nav4Text3" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
-                    <tspan x="55.9453" y="155.227">About</tspan>
+                    <tspan x="99.4453" y="210.227">About</tspan>
                 </text>
-                <rect onclick="doScrolling(4)" class="navHover" id="nav4Rectangle5" x="33.6411" y="176.819"
+                <rect class="navHover" onclick="doScrolling(4)" id="nav4Rectangle5" x="74.6411" y="231.819"
                     width="116.359" height="39.0826" fill="#959595" />
-                <path id="nav4Triangle5" d="M34.6613 176.905L34.6613 215.902L-2.6637e-05 194.448L34.6613 176.905Z"
+                <path id="nav4Triangle5" d="M75.6613 231.905L75.6613 270.902L41 249.448L75.6613 231.905Z"
                     fill="#959595" />
                 <text id="nav4Text4" fill="black" font-family="Arial" font-size="24" letter-spacing="0em">
-                    <tspan x="44.9062" y="205.227">Contact</tspan>
+                    <tspan x="88.4062" y="260.227">Contact</tspan>
                 </text>
+                <rect id="nav4Rectangle1" x="191" y="21" width="20" height="650" fill="#656565" />
+                <path id="nav2Light" d="M199.5 28.7165L229.046 28L402.702 669.25H0L172 28L199.5 28.7165Z"
+                    fill="url(#lampPaint)" fill-opacity="0.25" />
+                <ellipse id="nav4Triangle1" cx="200.337" cy="17" rx="38.5" ry="17" fill="#656565" />
+                <path id="nav4Lamp"
+                    d="M231 27C231 31.1421 217.345 37 200.5 37C183.655 37 170 31.1421 170 27C170 22.8579 183.655 16 200.5 16C217.345 16 231 22.8579 231 27Z"
+                    fill="#8D8D8D" />
             </svg>
+
         </div>
 
         <div id="floor"></div>
