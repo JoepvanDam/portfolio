@@ -43,7 +43,7 @@ function updateScroll() {
 }
 
 
-// Darkmode if time between 18 and 8
+// Onload events
 window.onload = (event) => { const date = new Date(); const time = date.getHours(); if (time > 18 || time < 8) { darkmodeSwitch(); } };
 
 
@@ -469,6 +469,11 @@ function languageSwitch(lang) {
         document.getElementById("nav3Text1").innerHTML = "<tspan x='99.8635' y='111.088'>Home</tspan>";
         document.getElementById("nav3Text2").innerHTML = "<tspan x='87.4102' y='160.227'>Projects</tspan>";
         document.getElementById("nav3Text3").innerHTML = "<tspan x='99.945' y='210.227'>About</tspan>";
+
+        // Nav4
+        document.getElementById("nav4Text1").innerHTML = "<tspan x='99.8635' y='111.088'>Home</tspan>";
+        document.getElementById("nav4Text2").innerHTML = "<tspan x='87.4102' y='160.227'>Projects</tspan>";
+        document.getElementById("nav4Text3").innerHTML = "<tspan x='99.945' y='210.227'>About</tspan>";
     }
 
     else if (lang == 1) {
@@ -528,6 +533,11 @@ function languageSwitch(lang) {
         document.getElementById("nav3Text1").innerHTML = "<tspan x='105.8635' y='111.088'>Start</tspan>";
         document.getElementById("nav3Text2").innerHTML = "<tspan x='84.4102' y='160.227'>Projecten</tspan>";
         document.getElementById("nav3Text3").innerHTML = "<tspan x='86.945' y='210.227'>Over mij</tspan>";
+
+        // Nav4
+        document.getElementById("nav4Text1").innerHTML = "<tspan x='105.8635' y='111.088'>Start</tspan>";
+        document.getElementById("nav4Text2").innerHTML = "<tspan x='84.4102' y='160.227'>Projecten</tspan>";
+        document.getElementById("nav4Text3").innerHTML = "<tspan x='86.945' y='210.227'>Over mij</tspan>";
     }
 }
 
@@ -717,12 +727,12 @@ function skillsPlane(inOut) {
 function catPlane(inOut) {
     if (inOut == 0) {
         document.getElementById("catPlane").style.opacity = "1";
-        setTimeout(() => { document.getElementById("catPlane").style.left = "15%"; }, 500);
+        setTimeout(() => { document.getElementById("catPlane").style.left = "15%"; }, 100);
         document.getElementById("cat").setAttribute("onclick", "catPlane(1)");
     } else if (inOut == 1) {
         document.getElementById("catPlane").style.left = "100%";
         setTimeout(() => { document.getElementById("catPlane").style.opacity = "0"; }, 500);
-        setTimeout(() => { document.getElementById("catPlane").style.left = "-25%"; }, 500);
+        setTimeout(() => { document.getElementById("catPlane").style.left = "-50%"; }, 500);
         document.getElementById("cat").setAttribute("onclick", "catPlane(0)");
     }
 }
@@ -736,7 +746,7 @@ function dogPlane(inOut) {
     } else if (inOut == 1) {
         document.getElementById("dogPlane").style.left = "100%";
         setTimeout(() => { document.getElementById("dogPlane").style.opacity = "0"; }, 500);
-        setTimeout(() => { document.getElementById("dogPlane").style.left = "-25%"; }, 500);
+        setTimeout(() => { document.getElementById("dogPlane").style.left = "-50%"; }, 500);
         document.getElementById("dog").setAttribute("onclick", "dogPlane(0)")
     }
 }
