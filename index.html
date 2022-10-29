@@ -24,20 +24,26 @@
                 <img id="settingImg" src="./images/settingGear.svg" onclick="settings(0)">
                 <div id="settingBox">
                     <div id="settingItems">
-                        <img id="settingImg2" src="./images/settingGear2.svg" onclick="settings(1)">
+                        <svg id=settingImg2 onclick="settings(1)" width="78" height="78" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.109131" y="7.18018" width="10" height="100"
+                                transform="rotate(-45 0.109131 7.18018)" fill="#FFFFFF" />
+                            <rect width="10" height="100"
+                                transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 77.8909 7.18018)"
+                                fill="#FFFFFF" />
+                        </svg>
                         <div class="settingItem">
                             <img class="settingFlag currentFlag" id="flagEN" src="./images/flagEN.svg"
                                 onclick="languageSwitch(0)">
                             <img class="settingFlag" id="flagNL" src="./images/flagNL.svg" onclick="languageSwitch(1)">
                         </div>
                         <div class="settingItem">
-                            <h1 class="settingText" id="settingsDarkmodeText1"><img src="./images/sun.svg"><br>Darkmode
+                            <h1 class="settingText" id="settingsDarkmodeText1"><img src="./images/sun.svg"><br>Darkmode<br>
                                 OFF</h1>
                             <label class="switch" id="darkmodeSwitch">
                                 <input id="darkmodeCheckbox" type="checkbox" onclick="darkmodeSwitch()">
                                 <span class="slider round"></span>
                             </label>
-                            <h1 class="settingText" id="settingsDarkmodeText2"><img src="./images/moon.svg"><br>Darkmode
+                            <h1 class="settingText" id="settingsDarkmodeText2"><img src="./images/moon.svg"><br>Darkmode<br>
                                 ON</h1>
                         </div>
                         <div class="settingItem">
