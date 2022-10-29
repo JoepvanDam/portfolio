@@ -2,6 +2,7 @@ html {
     height: 100vh;
     scroll-behavior: smooth;
     background-color: rgb(0, 0, 0);
+    transition: all 0s !important;
 }
 
 body {
@@ -13,23 +14,6 @@ body {
     color: white;
     font-family: Arial;
     background-color: rgb(0, 0, 0);
-}
-
-::-webkit-scrollbar {
-    height: 20px;
-    width: 0;
-}
-
-::-webkit-scrollbar-track {
-    background: rgb(80, 80, 80);
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgb(40, 40, 40);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(20, 20, 20);
 }
 
 #darkmodeWrapper {
@@ -68,7 +52,8 @@ body {
     width: 3vw;
     text-align: center;
     border-radius: 50px;
-    background-color: rgba(50, 50, 50, 1);
+    background-color: rgb(125, 125, 125);
+    transition: all 2s, height 0s, width 0s, top 0s, right 0s;
     z-index: 4;
 }
 
@@ -78,6 +63,7 @@ body {
     font-size: 4vw;
     color: white;
     user-select: none;
+    transition: all 2s, transform 0.25s, height 0s, width 0s, top 0s, right 0s;
 }
 
 #darkmodeImgSun,
@@ -101,6 +87,7 @@ body {
     width: 5vw;
     transition: 0.25s;
     filter: brightness(0.5);
+    transition: all 2s, transform 0.25s, height 0s, width 0s, top 0s, right 0s;
 }
 
 #settingImg2 {
@@ -172,6 +159,12 @@ body {
 .settingFlag {
     margin: 0 50px;
     border-radius: 10px;
+    transition: 0.5s;
+    filter: brightness(0.5);
+}
+
+.currentFlag {
+    filter: brightness(1);
 }
 
 .switch {
@@ -234,39 +227,61 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-#progressBar {
+#settingsToolTipWrapper {
     position: fixed;
+    display: flex;
+    flex-direction: row;
     padding: 0;
     margin: 0;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: 100;
+    top: 3.5vw;
+    right: 100vw;
+    opacity: 1;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+    transition: 1s;
+    z-index: 3;
 }
 
-#progress {
-    position: fixed;
+#settingsToolTip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
     margin: 0;
-    top: 0;
-    left: 0;
+    height: 4vw;
+    width: 20vw;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgb(125, 125, 125);
+    transition: 2s;
+}
+
+#settingsToolTipTriangle {
+    position: relative;
+    padding: 0;
+    margin: 0;
     width: 0;
-    height: 20px;
-    background-color: rgb(50, 100, 150);
-    transition: all 0.1s, background-color 2s;
+    height: 0;
+    border-style: solid;
+    border-width: 2vw 0 2vw 4vw;
+    border-color: transparent transparent transparent rgb(125, 125, 125);
+    transition: 2s;
+}
+
+#settingsToolTip p {
+    font-size: 1vw;
 }
 
 #fullPage {
-    position: absolute;
+    position: fixed;
     display: grid;
     height: 100vh;
     width: 400vw;
+    left: 0;
     grid-template-rows: 100vh;
     grid-template-columns: repeat(100vw, 4);
     background-color: #9BBDD1;
-    transition: 2.5s;
+    transition: all 2.5s, left 1s;
 }
 
 .part {
@@ -284,7 +299,7 @@ input:checked+.slider:before {
     padding: 0;
     margin: 0;
     bottom: 40px;
-    left: 20%;
+    left: 25vw;
     width: 45vw;
     height: auto;
     pointer-events: none;
@@ -304,11 +319,26 @@ input:checked+.slider:before {
     transition: 2s;
 }
 
+#chimneyRectangle {
+    pointer-events: all;
+}
+
 #smoke1,
 #smoke2,
 #smoke3,
 #smoke4 {
     opacity: 0;
+}
+
+.welcomeHover {
+    user-select: none;
+    pointer-events: all;
+    transition: 0.1s;
+}
+
+.welcomeHover:hover {
+    fill: rgb(0, 0, 0);
+    transform: scale(0.8);
 }
 
 #nav1 {
@@ -388,6 +418,7 @@ input:checked+.slider:before {
     width: 20vw;
     height: auto;
     transform: scale(1.25);
+    z-index: 2;
 }
 
 #nav2Rectangle1,
@@ -417,19 +448,319 @@ input:checked+.slider:before {
     left: 200vw;
 }
 
+#aboutInfo {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    height: 30%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#basicInfo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    padding: 0;
+    margin: 0;
+    top: 10%;
+    left: -60%;
+    transition: all 1s, opacity 0s;
+    opacity: 0;
+}
+
+#infoBox1 {
+    display: none;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    width: 50vw;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 2vw;
+    color: black;
+    text-align: left;
+    background-color: rgb(170, 170, 170);
+    transition: 2s;
+}
+
+.infoBoxText {
+    padding: 0;
+    margin: 20px;
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+.infoBoxTop {
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.infoBoxClickable {
+    color: rgb(100, 100, 250);
+    text-decoration: underline;
+    pointer-events: all;
+}
+
+.infoBoxClickable:hover {
+    cursor: pointer;
+}
+
+.infoBoxSmall {
+    font-size: 1.2vw;
+}
+
+#infoBox1 a {
+    color: rgb(100, 100, 250);
+    pointer-events: all;
+}
+
+.line1, .line2 {
+    padding: 0;
+    margin: 15px -5px 15px 0;
+    height: 5px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#catPlane, #dogPlane {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    padding: 5px;
+    margin: 0;
+    top: 100%;
+    left: -25%;
+    height: 15vw;
+    width: 30vw;
+    opacity: 0;
+    transition: all 1s, opacity 0s;
+    z-index: 1;
+}
+
+#catPlane {
+    top: 95%;
+}
+
+#dogPlane {
+    top: 120%;
+}
+
+#catImg, #dogImg {
+    height: 100%;
+    width: auto;
+    border: 1px solid black;
+    border-radius: 50px;
+    border-radius: 50px;
+    background-color: rgb(170, 170, 170);
+}
+
+#interests {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    padding: 0;
+    margin: 0;
+    top: 30%;
+    left: -60%;
+    transition: all 1s, opacity 0s;
+    opacity: 0;
+}
+
+#infoBox2 {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    width: 50vw;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 2vw;
+    color: black;
+    text-align: left;
+    background-color: rgb(170, 170, 170);
+    transition: 2s;
+}
+
+.infoBoxList {
+    padding: 0;
+    margin: 20px 20px 20px 50px;
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+.infoBoxListItem {
+    margin: 20px 0 0 0;
+}
+
+#aboutSkills {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: -10%;
+    height: 60%;
+    width: 80%;
+    pointer-events: none;
+    transition: all 1s, opacity 0s;
+    z-index: 1;
+}
+
+#htmlSkill, #cssSkill, #jsSkill, #otherSkills {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    padding: 0;
+    margin: 1% 0;
+    width: 0;
+    height: 25%;
+    transition: all 1s, opacity 0s;
+}
+
+.skillBox1, .skillBox2, .skillBox3, .skillBox4, .skillBox5, .skillBox6, .skillBoxOther {
+    display: flex;
+    text-align: center;
+    place-items: center;
+    padding: 0;
+    margin: 0 2px 0 0;
+    width: 10%;
+    height: 4vh;
+}
+
+.skillBox1 {
+    background-color: rgba(150, 0, 0, 0.5);
+}
+
+.skillBox2 {
+    background-color: rgba(150, 50, 0, 0.5);
+}
+
+.skillBox3 {
+    background-color: rgba(150, 100, 0, 0.5);
+}
+
+.skillBox4 {
+    background-color: rgba(150, 150, 0, 0.5);
+}
+
+.skillBox5 {
+    background-color: rgba(100, 150, 0, 0.5);
+}
+
+.skillBox6 {
+    background-color: rgba(50, 150, 0, 0.5);
+}
+
+.skillBoxOther {
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+#skillText1, #skillText2, #skillText3, #skillText4, #skillText5, #skillText6, #skillText7, #skillText8, #skillText9 {
+    margin: 0 0 0 1vw;
+    font-size: 1.5vw;
+    color: white;
+    width: 70%;
+    transition: all 1s;
+    opacity: 0;
+}
+
+#plane5, #plane6, #plane7, #plane8 {
+    min-height: 100px;
+    min-width: 100px;
+    transition: all 2s, opacity 0s;
+    opacity: 0;
+}
+
+#planeMid1, #planeMid2, #planeMid3, #planeMid4, #planeMid5, #planeMid6, #planeMid7, #planeMid8 {
+    min-height: 100px;
+    min-width: 100px;
+    transition: all 2s, opacity 0s;
+}
+
+#towerControl {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 50px;
+    left: 20%;
+    height: 25vh;
+    width: 40vw;
+    border: 1px solid black;
+    border-bottom: none;
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw;
+    color: black;
+    background-color: rgb(200, 200, 200);
+    transition: 2s;
+}
+
+#controlText {
+    padding: 0;
+    margin: 10px 0 0 0;
+    height: 5%;
+    width: 100%;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.controls {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    height: auto;
+    width: 33%;
+}
+
+#control2 {
+    left: 33%;
+}
+
+#control3 {
+    left: 66%;
+}
+
+.controlButtonText {
+    font-size: 1.5vw;
+}
+
+.controlButton {
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#basicInfoButton, #interestsButton, #skillsButton {
+    background-color: rgb(80, 150, 80);
+    transition: 0.25s;
+}
+
+#basicInfoButton:hover, #interestsButton:hover, #skillsButton:hover {
+    background-color: rgb(150, 150, 150) !important;
+    cursor: pointer;
+}
+
 #atcTower {
     position: absolute;
     padding: 0;
     margin: 0;
     bottom: 40px;
     right: 15%;
+    width: 20vw;
     filter: saturate(0);
     user-select: none;
-    z-index: 2;
-}
-
-#atcTower {
     transition: 2s;
+    z-index: 2;
 }
 
 #nav3 {
@@ -441,6 +772,7 @@ input:checked+.slider:before {
     width: 20vw;
     height: auto;
     transform: scale(1.25);
+    z-index: 2;
 }
 
 #nav3Rectangle1,
@@ -475,7 +807,7 @@ input:checked+.slider:before {
     padding: 0;
     margin: 0;
     bottom: 40px;
-    left: 15%;
+    left: 20%;
     width: 50vw;
     height: auto;
     z-index: 2;
@@ -486,7 +818,10 @@ input:checked+.slider:before {
 #aboveBillboard,
 #billboardRectangle,
 #billboardSupportLeftStand,
-#billboardSupportRightStand {
+#billboardSupportRightStand,
+#billboardContactForm1,
+#billboardContactForm2,
+#billboardContactForm3 {
     transition: 2s;
 }
 
@@ -498,17 +833,31 @@ input:checked+.slider:before {
     transition: 0.25s;
 }
 
+#linkToGmail, #linkToLinkedIn, #linkToGithub {
+    pointer-events: all;
+}
+
+#linkToGmail:hover, #linkToLinkedIn:hover, #linkToGithub:hover {
+    cursor: pointer;
+    filter: brightness(0.75);
+}
+
+#contactFormButton:hover {
+    cursor: pointer;
+    fill: #643dff;
+}
+
 #contactForm {
     position: absolute;
     display: none;
     padding: 0;
     margin: 0;
     bottom: 100px;
-    left: 20%;
+    left: 25%;
     width: 40vw;
     height: auto;
     opacity: 0;
-    transition: 2s;
+    transition: all 2s, opacity 0.5s;
     z-index: 3;
 }
 
@@ -527,12 +876,23 @@ input:checked+.slider:before {
     transition: 2s;
 }
 
+#contactText1 {
+    pointer-events: all;
+    fill: red;
+    transition: fill 0.1s;
+}
+
+#contactText1:hover {
+    cursor: pointer;
+    fill: lightcoral;
+}
+
 #nav4 {
     position: absolute;
     padding: 0;
     margin: 0;
     bottom: 40px;
-    right: 10%;
+    right: 5%;
     width: 20vw;
     height: auto;
     transform: scale(1.25);
