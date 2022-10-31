@@ -36,7 +36,7 @@ body {
     width: 5vw;
     border-radius: 50px;
     background-color: rgba(50, 50, 50, 0);
-    z-index: 6;
+    z-index: 7;
 }
 
 #infoWrapper {
@@ -51,7 +51,7 @@ body {
     border-radius: 50px;
     background-color: rgb(125, 125, 125);
     transition: all 2s, height 0s, width 0s, top 0s, right 0s;
-    z-index: 5;
+    z-index: 6;
 }
 
 #infoWrapper h1 {
@@ -390,7 +390,17 @@ input:checked+.slider:before {
     width: 40vw;
     height: auto;
     pointer-events: none;
+    transition: 2s;
     z-index: 4;
+}
+
+.projectHover {
+    pointer-events: all;
+}
+
+.projectHover:hover {
+    fill: #7f5fff;
+    cursor: pointer;
 }
 
 #officeRectangle,
@@ -409,6 +419,77 @@ input:checked+.slider:before {
 #doorLeft,
 #doorRight {
     transition: 2s;
+}
+
+#projectMoreInfoClose {
+    position: absolute;
+    display: none;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+}
+
+#projectMoreInfo {
+    position: absolute;
+    display: none;
+    padding: 0;
+    margin: 0;
+    bottom: 12.5vh;
+    left: 12.5vw;
+    width: 75vw;
+    height: 75vh;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5vw;
+    background-color: rgb(175, 175, 175);
+    opacity: 0;
+    transition: all 2s, opacity 0.2s;
+    z-index: 6;
+}
+
+.projectMoreInfoTitle {
+    padding: 0;
+    margin: 2vh 0;
+    font-size: 4vw;
+    width: 100%;
+    text-align: center;
+}
+
+.projectMoreInfoTitle::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 6vw;
+    width: 97%;
+    left: 1.5%;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.projectMoreInfoText {
+    padding: 0;
+    margin: 0 1vw;
+    font-size: 1.25vw;
+    text-align: left;
+}
+
+#projectCloseImg {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 2vw;
+    left: 2vw;
+    height: 3vw;
+    width: 3vw;
+    filter: invert(100%);
+}
+
+#projectCloseImg:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 #nav2 {
@@ -660,7 +741,7 @@ input:checked+.slider:before {
     background-color: rgba(50, 50, 50, 0.5);
 }
 
-#skillText1, #skillText2, #skillText3, #skillText4, #skillText5, #skillText6, #skillText7, #skillText8, #skillText9 {
+#skillText1, #skillText2, #skillText3, #skillText4, #skillText5, #skillText6, #skillText7 {
     margin: 0 0 0 1vw;
     font-size: 1.5vw;
     color: white;
