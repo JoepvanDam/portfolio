@@ -18,14 +18,17 @@ function checkKey(e) {
 }
 
 // Scrolling for mobile (touch)
-let touchstartX = 0; let touchendX = 0;
+let touchStartX = 0; let touchEndX = 0;
 function checkDirection() {
-    if (touchendX < touchstartX) { if (left > -300) { left = left - 100; } }; // Swipe left
-    if (touchendX > touchstartX) { if (left < 0) { left = left + 100; } }; // Swipe right
+    let touchDistance = touchEndX - touchStartX;
+    if (touchDistance > 100 || touchDistance < -100) {
+        if (touchEndX < touchStartX) { if (left > -300) { left = left - 100; } }; // Swipe left
+        if (touchEndX > touchStartX) { if (left < 0) { left = left + 100; } }; // Swipe right
+    }
     updateScroll();
 }
-document.addEventListener('touchstart', e => { touchstartX = e.changedTouches[0].screenX; })
-document.addEventListener('touchend', e => { touchendX = e.changedTouches[0].screenX; checkDirection(); })
+document.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; })
+document.addEventListener('touchend', e => { touchEndX = e.changedTouches[0].screenX; checkDirection(); })
 
 // Scrolling using the nav
 function doScrolling(part) {
@@ -44,7 +47,10 @@ function updateScroll() {
 
 
 // Onload events
-window.onload = (event) => { const date = new Date(); const time = date.getHours(); if (time > 18 || time < 8) { darkmodeSwitch(); } };
+window.onload = (event) => { 
+    const date = new Date(); const time = date.getHours(); if (time > 18 || time < 8) { darkmodeSwitch(); } 
+    if (screen.availHeight > screen.availWidth){ alert("This site is best viewed in landscape mode, please rotate your device for the best experience."); }
+};
 
 
 let darkmode = false;
