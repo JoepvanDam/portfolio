@@ -143,6 +143,11 @@ body {
     margin: 0;
 }
 
+.settingItem figure {
+    padding: 0;
+    margin: 0;
+}
+
 .settingText {
     margin: 0 50px;
     font-size: 20px;
@@ -511,7 +516,7 @@ input:checked+.slider:before {
 }
 
 #infoBox1 a {
-    color: rgb(100, 100, 250);
+    color: inherit;
     pointer-events: all;
 }
 
@@ -540,7 +545,7 @@ input:checked+.slider:before {
 }
 
 #catPlane {
-    top: 95%;
+    top: 105%;
 }
 
 #dogPlane {
@@ -548,7 +553,7 @@ input:checked+.slider:before {
 }
 
 #catImg, #dogImg {
-    height: 100%;
+    height: 80%;
     width: auto;
     border: 1px solid black;
     border-radius: 50px;
@@ -731,8 +736,8 @@ input:checked+.slider:before {
 .controlButton {
     padding: 0;
     margin: 0;
-    height: 50px;
-    width: 50px;
+    height: 3vw;
+    width: 3vw;
     border: 1px solid black;
     border-radius: 50%;
 }
