@@ -175,6 +175,12 @@ function darkmodeSwitch() {
             setTimeout(() => { document.getElementById("window6").setAttribute("fill", "#8C9FB6"); }, 700);
             setTimeout(() => { document.getElementById("window5").setAttribute("fill", "#8C9FB6"); }, 1000);
 
+            //Projects | More info box
+            document.getElementById("projectMoreInfo").style.backgroundColor = "rgb(175, 175, 175)";
+            document.getElementById("projectMoreInfo").style.color = "black";
+            document.getElementById("projectMoreInfo").style.border = "1px solid black";
+            document.getElementById("projectCloseImg").style.filter = "invert(100%)";
+
             // About | ATC Tower, Control & Planes
             document.getElementById("atcTower").style.filter = "saturate(0)";
             document.getElementById("towerControl").style.backgroundColor = "rgb(200, 200, 200)";
@@ -200,9 +206,6 @@ function darkmodeSwitch() {
             document.getElementById("billboardSupportRightStand").setAttribute("fill", "#4F4F4F");
             document.getElementById("aboveBillboard").setAttribute("fill", "#ABABAB");
             document.getElementById("billboardRectangle").setAttribute("fill", "#C2C2C2");
-            document.getElementById("billboardContactForm1").setAttribute("fill", "#9F9F9F");
-            document.getElementById("billboardContactForm2").setAttribute("fill", "#9F9F9F");
-            document.getElementById("billboardContactForm3").setAttribute("fill", "#9F9F9F");
             setTimeout(() => {
                 document.getElementById("billboardLight1").setAttribute("fill", "#989898");
                 document.getElementById("billboardLight2").setAttribute("fill", "#989898");
@@ -210,20 +213,6 @@ function darkmodeSwitch() {
                 document.getElementById("billboardLight4").setAttribute("fill", "#989898");
                 document.getElementById("billboardLight5").setAttribute("fill", "#989898");
             }, 700);
-
-            // Contact | Form
-            document.getElementById("contactText1").setAttribute("fill", "#000000");
-            document.getElementById("contactText2").setAttribute("fill", "#000000");
-            document.getElementById("contactText3").setAttribute("fill", "#000000");
-            document.getElementById("contactText4").setAttribute("fill", "#000000");
-            document.getElementById("contactRectangle1").setAttribute("fill", "#9F9F9F");
-            document.getElementById("contactRectangle2").setAttribute("fill", "#F0F0F0");
-            document.getElementById("contactRectangle3").setAttribute("fill", "#D9D9D9");
-            document.getElementById("contactRectangle4").setAttribute("fill", "#D9D9D9");
-            document.getElementById("contactRectangle5").setAttribute("fill", "#D9D9D9");
-            document.getElementById("contactRectangle6").setAttribute("fill", "#585858");
-            document.getElementById("contactPart1").setAttribute("fill", "#CACACA");
-            document.getElementById("contactPart2").setAttribute("fill", "#9F9F9F");
 
             setTimeout(() => { document.getElementById("darkmodeCheckbox").disabled = false; document.getElementById("darkmodeSwitch").style.filter = ""; }, 2800);
             setTimeout(() => { darkmode = false; darkmodeRunning = false; }, 2800);
@@ -358,6 +347,12 @@ function darkmodeSwitch() {
             setTimeout(() => { document.getElementById("window7").setAttribute("fill", "#E4C590"); }, 2400);
             setTimeout(() => { document.getElementById("window6").setAttribute("fill", "#E4C590"); }, 2800);
 
+            //Projects | More info box
+            document.getElementById("projectMoreInfo").style.backgroundColor = "rgb(50, 50, 50)";
+            document.getElementById("projectMoreInfo").style.color = "rgb(225, 225, 225)";
+            document.getElementById("projectMoreInfo").style.border = "1px solid rgb(100, 100, 100)";
+            document.getElementById("projectCloseImg").style.filter = "none";
+
             // About | ATC Tower & Planes
             document.getElementById("atcTower").style.filter = "saturate(0) brightness(0.5)";
             document.getElementById("towerControl").style.backgroundColor = "rgb(50, 50, 50)";
@@ -383,9 +378,6 @@ function darkmodeSwitch() {
             document.getElementById("billboardSupportRightStand").setAttribute("fill", "#0D0D0D");
             document.getElementById("aboveBillboard").setAttribute("fill", "#1A1A1A");
             document.getElementById("billboardRectangle").setAttribute("fill", "#404040");
-            document.getElementById("billboardContactForm1").setAttribute("fill", "#565656");
-            document.getElementById("billboardContactForm2").setAttribute("fill", "#565656");
-            document.getElementById("billboardContactForm3").setAttribute("fill", "#565656");
             setTimeout(() => {
                 document.getElementById("billboardLight1").setAttribute("fill", "#E4C590");
                 document.getElementById("billboardLight2").setAttribute("fill", "#E4C590");
@@ -393,20 +385,6 @@ function darkmodeSwitch() {
                 document.getElementById("billboardLight4").setAttribute("fill", "#E4C590");
                 document.getElementById("billboardLight5").setAttribute("fill", "#E4C590");
             }, 800);
-
-            // Contact | Form
-            document.getElementById("contactText1").setAttribute("fill", "#C2C2C2");
-            document.getElementById("contactText2").setAttribute("fill", "#C2C2C2");
-            document.getElementById("contactText3").setAttribute("fill", "#C2C2C2");
-            document.getElementById("contactText4").setAttribute("fill", "#C2C2C2");
-            document.getElementById("contactRectangle1").setAttribute("fill", "#292929");
-            document.getElementById("contactRectangle2").setAttribute("fill", "#202020");
-            document.getElementById("contactRectangle3").setAttribute("fill", "#565656");
-            document.getElementById("contactRectangle4").setAttribute("fill", "#565656");
-            document.getElementById("contactRectangle5").setAttribute("fill", "#565656");
-            document.getElementById("contactRectangle6").setAttribute("fill", "#838383");
-            document.getElementById("contactPart1").setAttribute("fill", "#414141");
-            document.getElementById("contactPart2").setAttribute("fill", "#292929");
 
             setTimeout(() => { document.getElementById("darkmodeCheckbox").disabled = false; document.getElementById("darkmodeSwitch").style.filter = ""; }, 3400);
             setTimeout(() => { darkmode = true; darkmodeRunning = false; }, 3400);
@@ -451,8 +429,14 @@ function languageSwitch(lang) {
         document.getElementById("nav1Text2").innerHTML = "<tspan x='224.91' y='160.227'>Projects</tspan>";
         document.getElementById("nav1Text3").innerHTML = "<tspan x='236.945' y='210.227'>About</tspan>";
 
-        // Office
+        // Projects | Office
         document.getElementById("frontBoardText").innerHTML = "<tspan x='259' y='771'>Projects</tspan>";
+        document.getElementById("officeText2").innerHTML = "<tspan x='303.10938' y='370.2025'>Work In Progress</tspan>"
+        document.getElementById("officeText3").innerHTML = "<tspan x='537.10938' y='370.2025'>Coming Soon...</tspan>"
+        document.getElementById("officeText4").innerHTML = "<tspan x='77.10938' y='593.2025'>More Info</tspan>"
+
+        // Projects | Project 1 More Info 
+        document.getElementById("project1MoreInfo").innerHTML = "<h1 class='projectMoreInfoTitle'>My Portfolio | First Project</h1> <p class='projectMoreInfoText'>All my previous projects were for fun, small, and most of them were never finished. This is the first project that I did for my study, and the first one that I actually created. There is no need to show any pictures of the finished product, since you're on it right now. This portfolio website is the first thing I made.<br><br>Besides being the only person working on this project, I was also the <em>client</em>. So I made something that made me happy and fit me, while allowing myself to learn new things. The school did have 3 requirements for this project; (1) An online portfolio website where you can (2) introduce yourself and (3) show your projects and your role in them.<br><br> Requirement 1: Well you are here, reading this text in an online webpage (presumably), so &check;<br>Requirement 2: In the about section on this page, you can read more about me, my interests, and skills &check;<br>Requirement 3: You can see more information about each project here too &check;<br><br><br><br><br><br>You can find the code for this project <a href='https://github.com/JoepvanDam/portfolio' target='_blank'>here</a>.</p>"
 
         // Nav2
         document.getElementById("nav2Text1").innerHTML = "<tspan x='99.8635' y='111.088'>Home</tspan>";
@@ -470,6 +454,11 @@ function languageSwitch(lang) {
         document.getElementById("basicInfoButtonText").innerHTML = "Basic info";
         document.getElementById("interestsButtonText").innerHTML = "My interests";
         document.getElementById("skillsButtonText").innerHTML = "My skills";
+
+        // About skills
+        document.getElementById("skillText4").innerHTML = "English";
+        document.getElementById("skillText5").innerHTML = "Dutch";
+        document.getElementById("skillText5").parentElement.style.width = "10%";
 
         // Nav3
         document.getElementById("nav3Text1").innerHTML = "<tspan x='99.8635' y='111.088'>Home</tspan>";
@@ -515,8 +504,14 @@ function languageSwitch(lang) {
         document.getElementById("nav1Text2").innerHTML = "<tspan x='218.91' y='160.227'>Projecten</tspan>";
         document.getElementById("nav1Text3").innerHTML = "<tspan x='220.945' y='210.227'>Over mij</tspan>";
 
-        // Office
+        // Projects | Office
         document.getElementById("frontBoardText").innerHTML = "<tspan x='244' y='771'>Projecten</tspan>";
+        document.getElementById("officeText2").innerHTML = "<tspan x='310.10938' y='370.2025'>In Uitvoering...</tspan>"
+        document.getElementById("officeText3").innerHTML = "<tspan x='545.10938' y='370.2025'>Binnenkort...</tspan>"
+        document.getElementById("officeText4").innerHTML = "<tspan x='77.10938' y='593.2025'>Meer Info</tspan>"
+
+        // Projects | Project 1 More Info 
+        document.getElementById("project1MoreInfo").innerHTML = "<h1 class='projectMoreInfoTitle'>Mijn Portfolio | Eerste Project</h1> <p class='projectMoreInfoText'>Al mijn vorige projecten waren voor plezier, klein, en de meesten heb ik nooit afgemaakt. Dit is het eerste project dat ik heb gedaan voor mijn studie, en het eerste dat ik echt heb (af)gemaakt. Er hoeft hier geen foto bij te staan van het eindproduct, omdat je er nu bent. Deze portfolio website is het eerste dat ik heb gemaakt.<br><br>Behalve dat ik zelf als enige aan het project werkte, was ik ook de <em>klant</em>. Dus heb ik iets gemaakt wat mij blij maakt en wat bij mij past, terwijl ik ook nieuwe dingen kon oppikken. Vanuit school waren er wel 3 vereisten voor het project; (1) Een online portfolio website waar je (2) jezelf kan voorstellen en (3) je projecten -en jouw rol daarin- kan laten zien.<br><br> Vereiste 1: Nou, je bent hier en je leest dit op een online pagina (vermoedelijk), dus &check;<br>Vereiste 2: In de over mij sectie op deze pagina kan je lezen over mij, mijn interesses, en skills &check;<br>Vereiste 3: Je kan hier ook meer informatie vinden over elk project &check;<br><br><br><br><br><br>Je kan <a href='https://github.com/JoepvanDam/portfolio' target='_blank'>hier</a> de code van dit project vinden.</p>"
 
         // Nav2 
         document.getElementById("nav2Text1").innerHTML = "<tspan x='105.8635' y='111.088'>Start</tspan>";
@@ -534,6 +529,11 @@ function languageSwitch(lang) {
         document.getElementById("basicInfoButtonText").innerHTML = "Basis info";
         document.getElementById("interestsButtonText").innerHTML = "Mijn interesses";
         document.getElementById("skillsButtonText").innerHTML = "Mijn skills";
+
+        // About skills
+        document.getElementById("skillText4").innerHTML = "Engels";
+        document.getElementById("skillText5").innerHTML = "Nederlands";
+        document.getElementById("skillText5").parentElement.style.width = "12%";
 
         // Nav3
         document.getElementById("nav3Text1").innerHTML = "<tspan x='105.8635' y='111.088'>Start</tspan>";
@@ -630,16 +630,42 @@ function animationSwitch() {
 }
 
 
+function showProject(projectNum) {
+    if (projectNum != 0) {
+        document.getElementById("projectMoreInfoClose").style.display = 'block';
+        document.getElementById("projectMoreInfo").style.display = 'block';
+        setTimeout(() => { document.getElementById("projectMoreInfo").style.opacity = '1'; }, 200);
+    } else {
+        document.getElementById("projectMoreInfo").style.opacity = '0';
+        setTimeout(() => {
+            document.getElementById("projectMoreInfoClose").style.display = 'none';
+            document.getElementById("projectMoreInfo").style.display = 'none';
+        }, 200);
+    }
+}
+
+
 let planeOnSite = false;
+let planesFlying = false;
 function flyPlanes(planeNumber) {
-    if (planeOnSite == false) {
-        if (planeNumber == 1) { basicInfoPlane(0); }
-        else if (planeNumber == 2) { interestsPlane(0); }
-        else if (planeNumber == 3) { skillsPlane(0); }
-        planeOnSite = true;
-    } else if (planeOnSite == true) {
-        basicInfoPlane(1); interestsPlane(1); skillsPlane(1);
-        planeOnSite = false;
+    if (planesFlying == false) {
+        planesFlying = true;
+        if (planeOnSite == false) {
+            if (planeNumber == 1) { basicInfoPlane(0); }
+            else if (planeNumber == 2) { interestsPlane(0); }
+            else if (planeNumber == 3) { skillsPlane(0); }
+            planeOnSite = true;
+            setTimeout(() => { planesFlying = false; }, 500);
+        } else if (planeOnSite == true) {
+            basicInfoPlane(1); interestsPlane(1); skillsPlane(1);
+            planeOnSite = false;
+            setTimeout(() => { 
+                planesFlying = false; 
+                document.getElementById("basicInfoButton").style.backgroundColor = "rgb(80, 150, 80)";
+                document.getElementById("interestsButton").style.backgroundColor = "rgb(80, 150, 80)";
+                document.getElementById("skillsButton").style.backgroundColor = "rgb(80, 150, 80)";
+            }, 1500);
+        }
     }
 }
 
@@ -653,11 +679,10 @@ function basicInfoPlane(inOut) {
         document.getElementById("skillsButton").style.backgroundColor = "rgb(150, 80, 80)";
     } else if (inOut == 1) {
         document.getElementById("basicInfo").style.left = "100%";
+        document.getElementById("basicInfoButton").style.backgroundColor = "rgb(150, 80, 80)";
         setTimeout(() => { document.getElementById("basicInfo").style.opacity = "0"; }, 500);
         setTimeout(() => { document.getElementById("basicInfo").style.left = "-60%"; }, 500);
         catPlane(1); dogPlane(1);
-        document.getElementById("interestsButton").style.backgroundColor = "rgb(80, 150, 80)";
-        document.getElementById("skillsButton").style.backgroundColor = "rgb(80, 150, 80)";
     }
 }
 
@@ -670,10 +695,9 @@ function interestsPlane(inOut) {
         document.getElementById("skillsButton").style.backgroundColor = "rgb(150, 80, 80)";
     } else if (inOut == 1) {
         document.getElementById("interests").style.left = "100%";
+        document.getElementById("interestsButton").style.backgroundColor = "rgb(150, 80, 80)";
         setTimeout(() => { document.getElementById("interests").style.opacity = "0"; }, 500);
         setTimeout(() => { document.getElementById("interests").style.left = "-60%"; }, 500);
-        document.getElementById("basicInfoButton").style.backgroundColor = "rgb(80, 150, 80)";
-        document.getElementById("skillsButton").style.backgroundColor = "rgb(80, 150, 80)";
     }
 }
 
@@ -700,12 +724,11 @@ function skillsPlane(inOut) {
             document.getElementById("skillText5").style.opacity = "1";
             document.getElementById("skillText6").style.opacity = "1";
             document.getElementById("skillText7").style.opacity = "1";
-            document.getElementById("skillText8").style.opacity = "1";
-            document.getElementById("skillText9").style.opacity = "1";
         }, 1200);
         document.getElementById("basicInfoButton").style.backgroundColor = "rgb(150, 80, 80)";
         document.getElementById("interestsButton").style.backgroundColor = "rgb(150, 80, 80)";
     } else if (inOut == 1) {
+        document.getElementById("skillsButton").style.backgroundColor = "rgb(150, 80, 80)";
         setTimeout(() => {
             document.getElementById("aboutSkills").style.left = "100%";
             document.getElementById("skillText1").style.opacity = "0";
@@ -715,8 +738,6 @@ function skillsPlane(inOut) {
             document.getElementById("skillText5").style.opacity = "0";
             document.getElementById("skillText6").style.opacity = "0";
             document.getElementById("skillText7").style.opacity = "0";
-            document.getElementById("skillText8").style.opacity = "0";
-            document.getElementById("skillText9").style.opacity = "0";
             document.getElementById("htmlSkill").style.width = "0%";
             document.getElementById("cssSkill").style.width = "0%";
             document.getElementById("jsSkill").style.width = "0%";
@@ -724,8 +745,6 @@ function skillsPlane(inOut) {
         }, 200);
         setTimeout(() => { document.getElementById("aboutSkills").style.opacity = "0"; }, 1000);
         setTimeout(() => { document.getElementById("aboutSkills").style.left = "-10%"; }, 1100);
-        document.getElementById("basicInfoButton").style.backgroundColor = "rgb(80, 150, 80)";
-        document.getElementById("interestsButton").style.backgroundColor = "rgb(80, 150, 80)";
     }
 }
 
@@ -758,6 +777,6 @@ function dogPlane(inOut) {
 }
 
 
-function toGmail() { window.open('mailto: ', '_blank'); }
+function toGmail() { window.open('mailto: joepportfoliobusiness@gmail.com?Subject=Portfolio Contact', '_blank'); }
 function toLinkedIn() { window.open('https://www.linkedin.com/in/joep-van-dam-5a0072226 ', '_blank'); }
 function toGithub() { window.open('https://www.github.com/JoepvanDam ', '_blank'); }
