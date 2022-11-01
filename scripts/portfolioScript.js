@@ -1,7 +1,7 @@
 // Onload events, sets mode to dark if time is between 18 and 8, alerts mobile user if h>w to switch to landscape mode.
 window.onload = (event) => {
     const date = new Date(); const time = date.getHours(); if (time > 18 || time < 8) { darkmodeSwitch(); }
-    if (screen.availHeight > screen.availWidth) { alert("This site is best viewed in landscape mode, please rotate your device for the best experience."); }
+    if (screen.availHeight > screen.availWidth) { alert("This site is not optimized for viewing in portrait mode, please rotate your device for the best experience."); }
 };
 
 // Dark mode definitions and functions
@@ -19,9 +19,6 @@ function darkmodeSwitch() {
             document.getElementById("darkmodeCheckbox").checked = false;
             document.getElementById("darkmodeSwitch").style.filter = "brightness(0.5)";
             document.getElementById("settingImg").style.filter = "brightness(0.5)";
-            document.getElementById("infoWrapper").style.backgroundColor = "rgb(125, 125, 125)";
-            document.getElementById("settingsToolTip").style.backgroundColor = "rgb(125, 125, 125)";
-            document.getElementById("settingsToolTipTriangle").style.borderColor = "transparent transparent transparent rgb(125, 125, 125)";
 
             // Moon leaves, sun enters
             document.getElementById("darkmodeImgMoon").style.left = "100vw";
@@ -113,9 +110,6 @@ function darkmodeSwitch() {
             document.getElementById("darkmodeCheckbox").checked = true;
             document.getElementById("darkmodeSwitch").style.filter = "brightness(0.5)";
             document.getElementById("settingImg").style.filter = "brightness(0.3)";
-            document.getElementById("infoWrapper").style.backgroundColor = "rgb(65, 65, 65)";
-            document.getElementById("settingsToolTip").style.backgroundColor = "rgb(70, 70, 70)";
-            document.getElementById("settingsToolTipTriangle").style.borderColor = "transparent transparent transparent rgb(70, 70, 70)";
 
             // Sun leaves, moon enters
             document.getElementById("darkmodeImgSun").style.left = "100vw";
@@ -264,10 +258,6 @@ function languageSwitch(lang) {
         document.getElementById("settingsDarkmodeText2").innerHTML = "<img src='./images/moon.svg'><br>Darkmode<br>ON";
         document.getElementById("settingsAnimText1").innerHTML = "Animations<br>OFF";
         document.getElementById("settingsAnimText2").innerHTML = "Animations<br>ON";
-        document.getElementById("settingsLastText1").innerHTML = "Test<br>OFF";
-        document.getElementById("settingsLastText2").innerHTML = "Test<br>ON";
-        document.getElementById("settingsToolTipText").innerHTML = "You can change the page language, switch from light to darkmode, and turn animations off, in the settings, here! (click on gear)";
-
         // House welcome
         document.getElementById("houseWelcomeText4").innerHTML = "c";
         document.getElementById("houseWelcomeText7").innerHTML = "e";
@@ -296,7 +286,7 @@ function languageSwitch(lang) {
         document.getElementById("officeText4").innerHTML = "<tspan x='77.10938' y='593.2025'>More Info</tspan>"
 
         // Projects | Project 1 More Info 
-        document.getElementById("project1MoreInfo").innerHTML = "<h1 class='projectMoreInfoTitle'>My Portfolio | First Project</h1> <p class='projectMoreInfoText'>All my previous projects were for fun, small, and most of them were never finished. This is the first project that I did for my study, and the first one that I actually created. There is no need to show any pictures of the finished product, since you're on it right now. This portfolio website is the first thing I made.<br><br>Besides being the only person working on this project, I was also the <em>client</em>. So I made something that made me happy and fit me, while allowing myself to learn new things. The school did have 3 requirements for this project; (1) An online portfolio website where you can (2) introduce yourself and (3) show your projects and your role in them.<br><br> Requirement 1: Well you are here, reading this text in an online webpage (presumably), so &check;<br>Requirement 2: In the about section on this page, you can read more about me, my interests, and skills &check;<br>Requirement 3: You can see more information about each project here too &check;<br><br><br><br><br><br>You can find the code for this project <a href='https://github.com/JoepvanDam/portfolio' target='_blank'>here</a>.</p>"
+        document.getElementById("project1MoreInfo").innerHTML = "<h1 class='projectMoreInfoTitle'>My Portfolio | First Project</h1> <p class='projectMoreInfoText'>All my previous projects were for fun, small, and most of them were never finished. This is the first project that I did for my study, and the first one that I actually created. There is no need to show any pictures of the finished product, since you're on it right now. This portfolio website is the first thing I made.<br><br>Besides being the only person working on this project, I was also the <em>client</em>. So I made something that made me happy and fit me, while allowing myself to learn new things. The school did have 3 requirements for this project; (1) An online portfolio website where you can (2) introduce yourself and (3) show your projects and your role in them.<br><br> Requirement 1: Well you are here, reading this text in an online webpage (presumably), so &check;<br>Requirement 2: In the about section on this page, you can read more about me, my interests, and skills &check;<br>Requirement 3: You can see more information about each project here too &check;<br><br><br><br>You can find the code for this project <a href='https://github.com/JoepvanDam/portfolio' target='_blank'>here</a>.</p>"
 
         // Nav2
         document.getElementById("nav2Text1").innerHTML = "<tspan x='99.8635' y='111.088'>Home</tspan>";
@@ -339,9 +329,6 @@ function languageSwitch(lang) {
         document.getElementById("settingsDarkmodeText2").innerHTML = "<img src='./images/moon.svg'><br>Donker-modus<br>AAN";
         document.getElementById("settingsAnimText1").innerHTML = "Animaties<br>UIT";
         document.getElementById("settingsAnimText2").innerHTML = "Animaties<br>AAN";
-        document.getElementById("settingsLastText1").innerHTML = "Test<br>UIT";
-        document.getElementById("settingsLastText2").innerHTML = "Test<br>AAN";
-        document.getElementById("settingsToolTipText").innerHTML = "Je kan de taal veranderen, wisselen van licht naar donker-modus, en animaties uitzetten, in de instellingen, hier! (klik op het tandwiel)";
 
         // House welcome
         document.getElementById("houseWelcomeText4").innerHTML = "k";
@@ -371,7 +358,7 @@ function languageSwitch(lang) {
         document.getElementById("officeText4").innerHTML = "<tspan x='77.10938' y='593.2025'>Meer Info</tspan>"
 
         // Projects | Project 1 More Info 
-        document.getElementById("project1MoreInfo").innerHTML = "<h1 class='projectMoreInfoTitle'>Mijn Portfolio | Eerste Project</h1> <p class='projectMoreInfoText'>Al mijn vorige projecten waren voor plezier, klein, en de meesten heb ik nooit afgemaakt. Dit is het eerste project dat ik heb gedaan voor mijn studie, en het eerste dat ik echt heb (af)gemaakt. Er hoeft hier geen foto bij te staan van het eindproduct, omdat je er nu bent. Deze portfolio website is het eerste dat ik heb gemaakt.<br><br>Behalve dat ik zelf als enige aan het project werkte, was ik ook de <em>klant</em>. Dus heb ik iets gemaakt wat mij blij maakt en wat bij mij past, terwijl ik ook nieuwe dingen kon oppikken. Vanuit school waren er wel 3 vereisten voor het project; (1) Een online portfolio website waar je (2) jezelf kan voorstellen en (3) je projecten -en jouw rol daarin- kan laten zien.<br><br> Vereiste 1: Nou, je bent hier en je leest dit op een online pagina (vermoedelijk), dus &check;<br>Vereiste 2: In de over mij sectie op deze pagina kan je lezen over mij, mijn interesses, en skills &check;<br>Vereiste 3: Je kan hier ook meer informatie vinden over elk project &check;<br><br><br><br><br><br>Je kan <a href='https://github.com/JoepvanDam/portfolio' target='_blank'>hier</a> de code van dit project vinden.</p>"
+        document.getElementById("project1MoreInfo").innerHTML = "<h1 class='projectMoreInfoTitle'>Mijn Portfolio | Eerste Project</h1> <p class='projectMoreInfoText'>Al mijn vorige projecten waren voor plezier, klein, en de meesten heb ik nooit afgemaakt. Dit is het eerste project dat ik heb gedaan voor mijn studie, en het eerste dat ik echt heb (af)gemaakt. Er hoeft hier geen foto bij te staan van het eindproduct, omdat je er nu bent. Deze portfolio website is het eerste dat ik heb gemaakt.<br><br>Behalve dat ik zelf als enige aan het project werkte, was ik ook de <em>klant</em>. Dus heb ik iets gemaakt wat mij blij maakt en wat bij mij past, terwijl ik ook nieuwe dingen kon oppikken. Vanuit school waren er wel 3 vereisten voor het project; (1) Een online portfolio website waar je (2) jezelf kan voorstellen en (3) je projecten -en jouw rol daarin- kan laten zien.<br><br> Vereiste 1: Nou, je bent hier en je leest dit op een online pagina (vermoedelijk), dus &check;<br>Vereiste 2: In de over mij sectie op deze pagina kan je lezen over mij, mijn interesses, en skills &check;<br>Vereiste 3: Je kan hier ook meer informatie vinden over elk project &check;<br><br><br><br>Je kan <a href='https://github.com/JoepvanDam/portfolio' target='_blank'>hier</a> de code van dit project vinden.</p>"
 
         // Nav2 
         document.getElementById("nav2Text1").innerHTML = "<tspan x='105.8635' y='111.088'>Start</tspan>";
@@ -407,17 +394,10 @@ function languageSwitch(lang) {
     }
 }
 
-// Extra info open/close
-function extraInfo(openClose) {
-    if (openClose == 0) { document.getElementById("settingsToolTipWrapper").style.right = "7vw"; document.getElementById("infoWrapper").innerHTML="<h1 onclick='extraInfo(1)'>?</h1>"; } 
-    else if (openClose == 1) { document.getElementById("settingsToolTipWrapper").style.right = "100vw"; document.getElementById("infoWrapper").innerHTML="<h1 onclick='extraInfo(0)'>?</h1>"; }
-}
-
 // Settings open/close
 function settings(openClose) {
-    extraInfo(1);
     if (openClose == 0) {
-        document.getElementById("settingBox").style.height = "80vh";
+        document.getElementById("settingBox").style.height = "90vh";
         document.getElementById("settingBox").style.width = "500px";
         setTimeout(() => {
             document.getElementById("settingItems").style.opacity = "1";
