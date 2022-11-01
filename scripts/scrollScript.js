@@ -36,7 +36,7 @@ function doScrolling(part) {
     updateScroll();
 }
 
-// Updating the page after scroll amount has been calculated
+// Updating the page after scroll amount has been calculated in the functions above
 function updateScroll() {
     if (left > 0) { left = 0; }; if (left < -300) { left = -300; };
     document.getElementById("fullPage").style.left = left + "vw";
