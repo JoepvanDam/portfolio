@@ -1,7 +1,7 @@
 // Onload events, sets mode to dark if time is between 18 and 8, alerts mobile user if h>w to switch to landscape mode.
 window.onload = (event) => {
     const date = new Date(); const time = date.getHours(); if (time > 18 || time < 8) { darkmodeSwitch(); }
-    if (screen.availHeight > screen.availWidth) { alert("This site is not optimized for viewing in portrait mode, please rotate your device for the best experience."); }
+    if (screen.availHeight > screen.availWidth) { alert("It looks like you are in portrait mode. This site is not optimized for viewing in portrait mode, please rotate your device to landscape mode for the best experience."); }
 };
 
 // Dark mode definitions and functions
