@@ -47,9 +47,9 @@ function updateScroll() {
 
 
 // Onload events
-window.onload = (event) => { 
-    const date = new Date(); const time = date.getHours(); if (time > 18 || time < 8) { darkmodeSwitch(); } 
-    if (screen.availHeight > screen.availWidth){ alert("This site is best viewed in landscape mode, please rotate your device for the best experience."); }
+window.onload = (event) => {
+    const date = new Date(); const time = date.getHours(); if (time > 18 || time < 8) { darkmodeSwitch(); }
+    if (screen.availHeight > screen.availWidth) { alert("This site is best viewed in landscape mode, please rotate your device for the best experience."); }
 };
 
 
@@ -82,74 +82,8 @@ function darkmodeSwitch() {
             // Nav lights
             setTimeout(() => { document.getElementById("lampPaint").setAttribute("y2", "28"); }, 250);
 
-            // Nav 1
-            document.getElementById("nav1Rectangle1").setAttribute("fill", "#656565");
-            document.getElementById("nav1Rectangle2").setAttribute("fill", "#959595");
-            document.getElementById("nav1Rectangle3").setAttribute("fill", "#959595");
-            document.getElementById("nav1Rectangle4").setAttribute("fill", "#959595");
-            document.getElementById("nav1Rectangle5").setAttribute("fill", "#959595");
-            document.getElementById("nav1Triangle1").setAttribute("fill", "#656565");
-            document.getElementById("nav1Triangle2").setAttribute("fill", "#959595");
-            document.getElementById("nav1Triangle3").setAttribute("fill", "#959595");
-            document.getElementById("nav1Triangle4").setAttribute("fill", "#959595");
-            document.getElementById("nav1Triangle5").setAttribute("fill", "#959595");
-            document.getElementById("nav1Text1").setAttribute("fill", "#000000");
-            document.getElementById("nav1Text2").setAttribute("fill", "#000000");
-            document.getElementById("nav1Text3").setAttribute("fill", "#000000");
-            document.getElementById("nav1Text4").setAttribute("fill", "#000000");
-            setTimeout(() => { document.getElementById("nav1Lamp").setAttribute("fill", "#8D8D8D"); }, 200);
-
-
-            // Nav 2
-            document.getElementById("nav2Rectangle1").setAttribute("fill", "#656565");
-            document.getElementById("nav2Rectangle2").setAttribute("fill", "#959595");
-            document.getElementById("nav2Rectangle3").setAttribute("fill", "#959595");
-            document.getElementById("nav2Rectangle4").setAttribute("fill", "#959595");
-            document.getElementById("nav2Rectangle5").setAttribute("fill", "#959595");
-            document.getElementById("nav2Triangle1").setAttribute("fill", "#656565");
-            document.getElementById("nav2Triangle2").setAttribute("fill", "#959595");
-            document.getElementById("nav2Triangle3").setAttribute("fill", "#959595");
-            document.getElementById("nav2Triangle4").setAttribute("fill", "#959595");
-            document.getElementById("nav2Triangle5").setAttribute("fill", "#959595");
-            document.getElementById("nav2Text1").setAttribute("fill", "#000000");
-            document.getElementById("nav2Text2").setAttribute("fill", "#000000");
-            document.getElementById("nav2Text3").setAttribute("fill", "#000000");
-            document.getElementById("nav2Text4").setAttribute("fill", "#000000");
-            setTimeout(() => { document.getElementById("nav2Lamp").setAttribute("fill", "#8D8D8D"); }, 200);
-
-            // Nav 3
-            document.getElementById("nav3Rectangle1").setAttribute("fill", "#656565");
-            document.getElementById("nav3Rectangle2").setAttribute("fill", "#959595");
-            document.getElementById("nav3Rectangle3").setAttribute("fill", "#959595");
-            document.getElementById("nav3Rectangle4").setAttribute("fill", "#959595");
-            document.getElementById("nav3Rectangle5").setAttribute("fill", "#959595");
-            document.getElementById("nav3Triangle1").setAttribute("fill", "#656565");
-            document.getElementById("nav3Triangle2").setAttribute("fill", "#959595");
-            document.getElementById("nav3Triangle3").setAttribute("fill", "#959595");
-            document.getElementById("nav3Triangle4").setAttribute("fill", "#959595");
-            document.getElementById("nav3Triangle5").setAttribute("fill", "#959595");
-            document.getElementById("nav3Text1").setAttribute("fill", "#000000");
-            document.getElementById("nav3Text2").setAttribute("fill", "#000000");
-            document.getElementById("nav3Text3").setAttribute("fill", "#000000");
-            document.getElementById("nav3Text4").setAttribute("fill", "#000000");
-            setTimeout(() => { document.getElementById("nav3Lamp").setAttribute("fill", "#8D8D8D"); }, 200);
-
-            // Nav 4
-            document.getElementById("nav4Rectangle1").setAttribute("fill", "#656565");
-            document.getElementById("nav4Rectangle2").setAttribute("fill", "#959595");
-            document.getElementById("nav4Rectangle3").setAttribute("fill", "#959595");
-            document.getElementById("nav4Rectangle4").setAttribute("fill", "#959595");
-            document.getElementById("nav4Rectangle5").setAttribute("fill", "#959595");
-            document.getElementById("nav4Triangle1").setAttribute("fill", "#656565");
-            document.getElementById("nav4Triangle2").setAttribute("fill", "#959595");
-            document.getElementById("nav4Triangle3").setAttribute("fill", "#959595");
-            document.getElementById("nav4Triangle4").setAttribute("fill", "#959595");
-            document.getElementById("nav4Triangle5").setAttribute("fill", "#959595");
-            document.getElementById("nav4Text1").setAttribute("fill", "#000000");
-            document.getElementById("nav4Text2").setAttribute("fill", "#000000");
-            document.getElementById("nav4Text3").setAttribute("fill", "#000000");
-            document.getElementById("nav4Text4").setAttribute("fill", "#000000");
-            setTimeout(() => { document.getElementById("nav4Lamp").setAttribute("fill", "#8D8D8D"); }, 200);
+            // Nav dark modes
+            navDarkmodeSwitch(1);
 
             // Home | House
             document.getElementById("homeRectangle").setAttribute("fill", "#7C7C7C");
@@ -248,73 +182,8 @@ function darkmodeSwitch() {
                 }, 1);
             }, 1200);
 
-            // Nav 1
-            document.getElementById("nav1Rectangle1").setAttribute("fill", "#2C2C2C");
-            document.getElementById("nav1Rectangle2").setAttribute("fill", "#333333");
-            document.getElementById("nav1Rectangle3").setAttribute("fill", "#333333");
-            document.getElementById("nav1Rectangle4").setAttribute("fill", "#333333");
-            document.getElementById("nav1Rectangle5").setAttribute("fill", "#333333");
-            document.getElementById("nav1Triangle1").setAttribute("fill", "#2C2C2C");
-            document.getElementById("nav1Triangle2").setAttribute("fill", "#333333");
-            document.getElementById("nav1Triangle3").setAttribute("fill", "#333333");
-            document.getElementById("nav1Triangle4").setAttribute("fill", "#333333");
-            document.getElementById("nav1Triangle5").setAttribute("fill", "#333333");
-            document.getElementById("nav1Text1").setAttribute("fill", "#FFFFFF");
-            document.getElementById("nav1Text2").setAttribute("fill", "#FFFFFF");
-            document.getElementById("nav1Text3").setAttribute("fill", "#FFFFFF");
-            document.getElementById("nav1Text4").setAttribute("fill", "#FFFFFF");
-            setTimeout(() => { document.getElementById("nav1Lamp").setAttribute("fill", "#E4C590"); }, 1100);
-
-            // Nav 2
-            document.getElementById("nav2Rectangle1").setAttribute("fill", "#2C2C2C");
-            document.getElementById("nav2Rectangle2").setAttribute("fill", "#333333");
-            document.getElementById("nav2Rectangle3").setAttribute("fill", "#333333");
-            document.getElementById("nav2Rectangle4").setAttribute("fill", "#333333");
-            document.getElementById("nav2Rectangle5").setAttribute("fill", "#333333");
-            document.getElementById("nav2Triangle1").setAttribute("fill", "#2C2C2C");
-            document.getElementById("nav2Triangle2").setAttribute("fill", "#333333");
-            document.getElementById("nav2Triangle3").setAttribute("fill", "#333333");
-            document.getElementById("nav2Triangle4").setAttribute("fill", "#333333");
-            document.getElementById("nav2Triangle5").setAttribute("fill", "#333333");
-            document.getElementById("nav2Text1").setAttribute("fill", "#FFFFFF");
-            document.getElementById("nav2Text2").setAttribute("fill", "#FFFFFF");
-            document.getElementById("nav2Text3").setAttribute("fill", "#FFFFFF");
-            document.getElementById("nav2Text4").setAttribute("fill", "#FFFFFF");
-            setTimeout(() => { document.getElementById("nav2Lamp").setAttribute("fill", "#E4C590"); }, 1100);
-
-            // Nav 3
-            document.getElementById("nav3Rectangle1").setAttribute("fill", "#2C2C2C");
-            document.getElementById("nav3Rectangle2").setAttribute("fill", "#333333");
-            document.getElementById("nav3Rectangle3").setAttribute("fill", "#333333");
-            document.getElementById("nav3Rectangle4").setAttribute("fill", "#333333");
-            document.getElementById("nav3Rectangle5").setAttribute("fill", "#333333");
-            document.getElementById("nav3Triangle1").setAttribute("fill", "#2C2C2C");
-            document.getElementById("nav3Triangle2").setAttribute("fill", "#333333");
-            document.getElementById("nav3Triangle3").setAttribute("fill", "#333333");
-            document.getElementById("nav3Triangle4").setAttribute("fill", "#333333");
-            document.getElementById("nav3Triangle5").setAttribute("fill", "#333333");
-            document.getElementById("nav3Text1").setAttribute("fill", "#FFFFFF");
-            document.getElementById("nav3Text2").setAttribute("fill", "#FFFFFF");
-            document.getElementById("nav3Text3").setAttribute("fill", "#FFFFFF");
-            document.getElementById("nav3Text4").setAttribute("fill", "#FFFFFF");
-            setTimeout(() => { document.getElementById("nav3Lamp").setAttribute("fill", "#E4C590"); }, 1100);
-
-            // Nav 4
-            document.getElementById("nav4Rectangle1").setAttribute("fill", "#2C2C2C");
-            document.getElementById("nav4Rectangle2").setAttribute("fill", "#333333");
-            document.getElementById("nav4Rectangle3").setAttribute("fill", "#333333");
-            document.getElementById("nav4Rectangle4").setAttribute("fill", "#333333");
-            document.getElementById("nav4Rectangle5").setAttribute("fill", "#333333");
-            document.getElementById("nav4Triangle1").setAttribute("fill", "#2C2C2C");
-            document.getElementById("nav4Triangle2").setAttribute("fill", "#333333");
-            document.getElementById("nav4Triangle3").setAttribute("fill", "#333333");
-            document.getElementById("nav4Triangle4").setAttribute("fill", "#333333");
-            document.getElementById("nav4Triangle5").setAttribute("fill", "#333333");
-            document.getElementById("nav4Text1").setAttribute("fill", "#FFFFFF");
-            document.getElementById("nav4Text2").setAttribute("fill", "#FFFFFF");
-            document.getElementById("nav4Text3").setAttribute("fill", "#FFFFFF");
-            document.getElementById("nav4Text4").setAttribute("fill", "#FFFFFF");
-            setTimeout(() => { document.getElementById("nav4Lamp").setAttribute("fill", "#E4C590"); }, 1100);
+            // Nav dark modes
+            navDarkmodeSwitch(0);
 
             // Home | House
             document.getElementById("homeRectangle").setAttribute("fill", "#4D4D4D");
@@ -389,6 +258,48 @@ function darkmodeSwitch() {
             setTimeout(() => { document.getElementById("darkmodeCheckbox").disabled = false; document.getElementById("darkmodeSwitch").style.filter = ""; }, 3400);
             setTimeout(() => { darkmode = true; darkmodeRunning = false; }, 3400);
         }
+    }
+}
+
+// Dark mode functions
+// For loops for the navs, 0 is dark 1 is light
+function navDarkmodeSwitch(darkLight) {
+    if (darkLight == 0) {
+        for (let navNum = 1; navNum < 5; navNum++) {
+            document.getElementById("nav" + navNum + "Rectangle1").setAttribute("fill", "#2C2C2C");
+            document.getElementById("nav" + navNum + "Triangle1").setAttribute("fill", "#2C2C2C");
+            for (let rectNum = 2; rectNum < 6; rectNum++) { document.getElementById("nav" + navNum + "Rectangle" + rectNum).setAttribute("fill", "#333333"); }
+            for (let triNum = 2; triNum < 6; triNum++) { document.getElementById("nav" + navNum + "Triangle" + triNum).setAttribute("fill", "#333333"); }
+            for (let textNum = 1; textNum < 5; textNum++) { document.getElementById("nav" + navNum + "Text" + textNum).setAttribute("fill", "#FFFFFF"); }
+            setTimeout(() => { document.getElementById("nav" + navNum + "Lamp").setAttribute("fill", "#E4C590"); }, 1100);
+        }
+    } else if (darkLight == 1) {
+        for (let navNum = 1; navNum < 5; navNum++) {
+            document.getElementById("nav" + navNum + "Rectangle1").setAttribute("fill", "#656565");
+            document.getElementById("nav" + navNum + "Triangle1").setAttribute("fill", "#656565");
+            for (let rectNum = 2; rectNum < 6; rectNum++) { document.getElementById("nav" + navNum + "Rectangle" + rectNum).setAttribute("fill", "#959595"); }
+            for (let triNum = 2; triNum < 6; triNum++) { document.getElementById("nav" + navNum + "Triangle" + triNum).setAttribute("fill", "#959595"); }
+            for (let textNum = 1; textNum < 5; textNum++) { document.getElementById("nav" + navNum + "Text" + textNum).setAttribute("fill", "#000000"); }
+            setTimeout(() => { document.getElementById("nav" + navNum + "Lamp").setAttribute("fill", "#8D8D8D"); }, 200);
+        }
+    }
+}
+
+
+// Turning on/off chimney smoke
+function chimneySmoke(onOff) {
+    if (onOff == 0) {
+        document.getElementById("smoke1").style.opacity = "1";
+        setTimeout(() => { document.getElementById("smoke2").style.opacity = "1"; }, 400);
+        setTimeout(() => { document.getElementById("smoke3").style.opacity = "1"; }, 1000);
+        setTimeout(() => { document.getElementById("smoke4").style.opacity = "1"; }, 1800);
+        setTimeout(() => { document.getElementById("chimneyRectangle").setAttribute("onclick", "chimneySmoke(1)") }, 1800);
+    } else if (onOff == 1) {
+        document.getElementById("smoke1").style.opacity = "0";
+        setTimeout(() => { document.getElementById("smoke2").style.opacity = "0"; }, 400);
+        setTimeout(() => { document.getElementById("smoke3").style.opacity = "0"; }, 1000);
+        setTimeout(() => { document.getElementById("smoke4").style.opacity = "0"; }, 1800);
+        setTimeout(() => { document.getElementById("chimneyRectangle").setAttribute("onclick", "chimneySmoke(0)") }, 1800);
     }
 }
 
@@ -548,23 +459,6 @@ function languageSwitch(lang) {
 }
 
 
-function chimneySmoke(onOff) {
-    if (onOff == 0) {
-        document.getElementById("smoke1").style.opacity = "1";
-        setTimeout(() => { document.getElementById("smoke2").style.opacity = "1"; }, 400);
-        setTimeout(() => { document.getElementById("smoke3").style.opacity = "1"; }, 1000);
-        setTimeout(() => { document.getElementById("smoke4").style.opacity = "1"; }, 1800);
-        setTimeout(() => { document.getElementById("chimneyRectangle").setAttribute("onclick", "chimneySmoke(1)") }, 1800);
-    } else if (onOff == 1) {
-        document.getElementById("smoke1").style.opacity = "0";
-        setTimeout(() => { document.getElementById("smoke2").style.opacity = "0"; }, 400);
-        setTimeout(() => { document.getElementById("smoke3").style.opacity = "0"; }, 1000);
-        setTimeout(() => { document.getElementById("smoke4").style.opacity = "0"; }, 1800);
-        setTimeout(() => { document.getElementById("chimneyRectangle").setAttribute("onclick", "chimneySmoke(0)") }, 1800);
-    }
-}
-
-
 let extraInfoOpen = false;
 function extraInfo(openClose) {
     if (openClose == 0) {
@@ -659,8 +553,8 @@ function flyPlanes(planeNumber) {
         } else if (planeOnSite == true) {
             basicInfoPlane(1); interestsPlane(1); skillsPlane(1);
             planeOnSite = false;
-            setTimeout(() => { 
-                planesFlying = false; 
+            setTimeout(() => {
+                planesFlying = false;
                 document.getElementById("basicInfoButton").style.backgroundColor = "rgb(80, 150, 80)";
                 document.getElementById("interestsButton").style.backgroundColor = "rgb(80, 150, 80)";
                 document.getElementById("skillsButton").style.backgroundColor = "rgb(80, 150, 80)";
