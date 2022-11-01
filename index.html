@@ -9,6 +9,7 @@
     <script defer type="text/javascript" src="./scripts/portfolioScript.js"></script>
     <script defer type="text/javascript" src="./scripts/scrollScript.js"></script>
     <link rel="stylesheet" href="./stylesheets/mainStyle.css">
+    <link rel="stylesheet" href="./stylesheets/responsiveStyle.css">
     <title>Portfolio | Joep van Dam</title>
 </head>
 
@@ -65,28 +66,20 @@
                             </label>
                             <h1 class="settingText" id="settingsAnimText2">Animations<br>ON</h1>
                         </div>
-                        <div class="settingItem">
-                            <h1 class="settingText" id="settingsLastText1">Test<br>OFF</h1>
-                            <label class="switch">
-                                <input type="checkbox" disabled>
-                                <span class="slider round"></span>
-                            </label>
-                            <h1 class="settingText" id="settingsLastText2">Test<br>ON</h1>
-                        </div>
                     </div>
                 </div>
             </div>
 
-            <div id="settingsToolTipWrapper">
-                <div id="settingsToolTip">
-                    <p id="settingsToolTipText">You can change the page language, switch from light to darkmode, and
-                        turn animations off, in the settings, here! (click on gear)</p>
-                </div>
-                <div id="settingsToolTipTriangle"></div>
-            </div>
-
-            <div id="infoWrapper">
-                <h1 onclick="extraInfo(0)">?</h1>
+            <div id="swipeWrapper">
+                <svg id="mobileSwipeInfo" width="411" height="201" viewBox="0 0 411 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M3.57126 134.347C-0.333984 130.441 -0.333984 124.11 3.57126 120.205L67.2109 56.565C71.1161 52.6597 77.4478 52.6597 81.353 56.565C85.2583 60.4702 85.2583 66.8018 81.353 70.7071L24.7845 127.276L81.353 183.844C85.2583 187.749 85.2583 194.081 81.353 197.986C77.4478 201.892 71.1161 201.892 67.2109 197.986L3.57126 134.347ZM410.642 137.276H10.6423V117.276H410.642V137.276Z"
+                        fill="white" />
+                    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="96"
+                        letter-spacing="0em">
+                        <tspan x="111.206" y="93.0702">Swipe</tspan>
+                    </text>
+                </svg>
             </div>
 
             <svg id="svgDefs" xmlns="http://www.w3.org/2000/svg">
@@ -252,7 +245,7 @@
                         show your projects and your role in them.<br><br> Requirement 1: Well you are here, reading this
                         text in an online webpage (presumably), so &check;<br>Requirement 2: In the about section on
                         this page, you can read more about me, my interests, and skills &check;<br>Requirement 3: You
-                        can see more information about each project here too &check;<br><br><br><br><br><br>You can find
+                        can see more information about each project here too &check;<br><br><br><br>You can find
                         the code for this project <a href="https://github.com/JoepvanDam/portfolio"
                             target="_blank">here</a>.</p>
                 </div>
@@ -370,7 +363,7 @@
 
                 <div id="interests">
                     <div id="infoBox2">
-                        <p class="infoBoxTop infoBoxText">My interests & hobbies</p>
+                        <p class="infoBoxText infoBoxTop">My interests & hobbies</p>
                         <ul class="infoBoxList">
                             <li class="infoBoxListItem">Programming; I have been programming as a hobby for years, and
                                 am now starting to get into it as an occupation.</li>
