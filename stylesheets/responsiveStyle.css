@@ -1,0 +1,40 @@
+@media (orientation: portrait) {
+    #swipeWrapper { display: block; }
+    #darkmodeImgSun, #darkmodeImgMoon { height: 10vh; width: 10vh; }
+    #settingImg { height: 10vh; width: 10vh; }
+    #settingImg2 { height: 5vh; width: 5vh; right: 5%; }
+    .settingText { font-size: 16px; }
+    
+    #nav1, #nav2, #nav3, #nav4 { display: none; }
+
+    #littleHouse { left: -15%; width: 130%; }
+
+    #littleOffice { left: 5%; width: 90%; }
+    #projectCloseImg { height: 3vh; width: 3vh; }
+    .projectMoreInfoTitle { font-size: 4.5vw; }
+    .projectMoreInfoTitle::before { top: 5vh; }
+    .projectMoreInfoText { font-size: 3vw; }
+
+    #atcTower { width: 40%; right: 0; }
+    .infoBoxTop { font-size: 5vw; }
+    .infoBoxText, .infoBoxListItem { font-size: 4vw; }
+    .infoBoxSmall { font-size: 3.5vw; }
+    #infoBox1, #infoBox2 { width: 100%; }
+    #aboutSkills { top: 10%; width: 110%; }
+    #skillText1, #skillText2, #skillText3, #skillText4, #skillText5, #skillText6, #skillText7 { font-size: 3vw; }
+
+    #catPlane, #dogPlane { height: 25vh; width: 30vh; top: 150%; }
+    #plane1, #plane2, #plane3, #plane4, #plane5, #plane6, #plane7, #plane8 { max-height: 100px; max-width: 100px; }
+
+    #towerControl { width: 60%; left: 5%; height: 20vh; }
+    #controlText { font-size: 6vw; }
+    .controlButtonText { font-size: 3vw; }
+    .controlButton { height: 5vh; width: 5vh; }
+
+    #littleBillboard { width: 90%; left: 5%; }
+}
+
+@media screen and (orientation: landscape) and (max-width: 700px) {
+    #littleHouse { width: 50vw; }
+    #littleOffice { width: 50vw; left: 15%; }
+}
