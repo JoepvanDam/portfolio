@@ -1,12 +1,13 @@
-// Onload events
+// Onload events, sets mode to dark if time is between 18 and 8, alerts mobile user if h>w to switch to landscape mode.
 window.onload = (event) => {
     const date = new Date(); const time = date.getHours(); if (time > 18 || time < 8) { darkmodeSwitch(); }
     if (screen.availHeight > screen.availWidth) { alert("This site is best viewed in landscape mode, please rotate your device for the best experience."); }
 };
 
-// Dark mode functions
+// Dark mode definitions and functions
 let darkmode = false;
 let darkmodeRunning = false;
+// Main dark mode function
 function darkmodeSwitch() {
     if (darkmodeRunning == false) {
         darkmodeRunning = true;
@@ -213,7 +214,6 @@ function darkmodeSwitch() {
     }
 }
 
-
 // For loops for the navs, 0 is dark 1 is light
 function navDarkmodeSwitch(darkLight) {
     if (darkLight == 0) {
@@ -236,8 +236,6 @@ function navDarkmodeSwitch(darkLight) {
         }
     }
 }
-
-
 // Turning on/off chimney smoke
 function chimneySmoke(onOff) {
     if (onOff == 0) {
@@ -255,8 +253,7 @@ function chimneySmoke(onOff) {
     }
 }
 
-
-// Language 0 is EN, 1 is NL.
+// Language definition and function, 0 is EN, 1 is NL
 let language = 0;
 function languageSwitch(lang) {
     if (lang == 0) {
@@ -410,24 +407,13 @@ function languageSwitch(lang) {
     }
 }
 
-
-let extraInfoOpen = false;
+// Extra info open/close
 function extraInfo(openClose) {
-    if (openClose == 0) {
-        if (extraInfoOpen == false) {
-            document.getElementById("settingsToolTipWrapper").style.right = "7vw";
-            extraInfoOpen = true;
-        } else if (extraInfoOpen == true) {
-            document.getElementById("settingsToolTipWrapper").style.right = "100vw";
-            extraInfoOpen = false;
-        }
-    } else if (openClose == 1) {
-        document.getElementById("settingsToolTipWrapper").style.right = "100vw";
-        extraInfoOpen = false;
-    }
+    if (openClose == 0) { document.getElementById("settingsToolTipWrapper").style.right = "7vw"; document.getElementById("infoWrapper").innerHTML="<h1 onclick='extraInfo(1)'>?</h1>"; } 
+    else if (openClose == 1) { document.getElementById("settingsToolTipWrapper").style.right = "100vw"; document.getElementById("infoWrapper").innerHTML="<h1 onclick='extraInfo(0)'>?</h1>"; }
 }
 
-
+// Settings open/close
 function settings(openClose) {
     extraInfo(1);
     if (openClose == 0) {
@@ -447,35 +433,23 @@ function settings(openClose) {
     }
 }
 
-
-function contactForm(openClose) {
-    if (openClose == 0) {
-        document.getElementById("contactForm").style.display = "block";
-        setTimeout(() => { document.getElementById("contactForm").style.opacity = "1"; }, 100);
-    } else if (openClose == 1) {
-        document.getElementById("contactForm").style.opacity = "0";
-        setTimeout(() => { document.getElementById("contactForm").style.display = "none"; }, 1000);
-    }
-}
-
-
-let animationsOn = true;
-function animationSwitch() {
-    if (animationsOn == true) {
+// Animation switch
+function animationSwitch(onOff) {
+    if (onOff == 0) {
+        document.getElementById("animationSwitch").setAttribute("onclick", "animationSwitch(1)");
         var ss = document.createElement("link");
         ss.rel = "stylesheet";
         ss.type = "text/css";
         ss.href = "./stylesheets/removeAnimations.css";
         ss.id = "removeAnimations";
         document.head.appendChild(ss);
-        animationsOn = false;
-    } else if (animationsOn == false) {
+    } else if (onOff == 1) {
+        document.getElementById("animationSwitch").setAttribute("onclick", "animationSwitch(0)");
         document.getElementById("removeAnimations").remove();
-        animationsOn = true;
     }
 }
 
-
+// Project extra info open/close
 function showProject(projectNum) {
     if (projectNum != 0) {
         document.getElementById("projectMoreInfoClose").style.display = 'block';
@@ -490,9 +464,10 @@ function showProject(projectNum) {
     }
 }
 
-
+// Plane definitions and functions for about section
 let planeOnSite = false;
 let planesFlying = false;
+// Main planes function
 function flyPlanes(planeNumber) {
     if (planesFlying == false) {
         planesFlying = true;
@@ -515,7 +490,7 @@ function flyPlanes(planeNumber) {
     }
 }
 
-
+// Different planes
 function basicInfoPlane(inOut) {
     if (inOut == 0) {
         document.getElementById("infoBox1").style.display = "block";
@@ -531,8 +506,6 @@ function basicInfoPlane(inOut) {
         catPlane(1); dogPlane(1);
     }
 }
-
-
 function interestsPlane(inOut) {
     if (inOut == 0) {
         document.getElementById("interests").style.opacity = "1";
@@ -546,8 +519,6 @@ function interestsPlane(inOut) {
         setTimeout(() => { document.getElementById("interests").style.left = "-60%"; }, 500);
     }
 }
-
-
 function skillsPlane(inOut) {
     if (inOut == 0) {
         document.getElementById("aboutSkills").style.opacity = "1";
@@ -594,7 +565,7 @@ function skillsPlane(inOut) {
     }
 }
 
-
+// Plane with cat/dog pics
 function catPlane(inOut) {
     if (inOut == 0) {
         document.getElementById("catPlane").style.opacity = "1";
@@ -607,8 +578,6 @@ function catPlane(inOut) {
         document.getElementById("cat").setAttribute("onclick", "catPlane(0)");
     }
 }
-
-
 function dogPlane(inOut) {
     if (inOut == 0) {
         document.getElementById("dogPlane").style.opacity = "1";
@@ -622,7 +591,7 @@ function dogPlane(inOut) {
     }
 }
 
-
+// Contact link functions
 function toGmail() { window.open('mailto: joepportfoliobusiness@gmail.com?Subject=Portfolio Contact'); }
 function toLinkedIn() { window.open('https://www.linkedin.com/in/joep-van-dam-5a0072226 ', '_blank'); }
 function toGithub() { window.open('https://www.github.com/JoepvanDam ', '_blank'); }
