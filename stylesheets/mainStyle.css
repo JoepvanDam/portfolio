@@ -50,7 +50,7 @@ body {
     text-align: center;
     border-radius: 50px;
     background-color: rgb(125, 125, 125);
-    transition: all 2s, height 0s, width 0s, top 0s, right 0s;
+    transition: all 2s, top 0s, right 0s;
     z-index: 6;
 }
 
@@ -60,7 +60,7 @@ body {
     font-size: 4vw;
     color: white;
     user-select: none;
-    transition: all 2s, transform 0.25s, height 0s, width 0s, top 0s, right 0s;
+    transition: all 2s, transform 0.25s;
 }
 
 #darkmodeImgSun,
@@ -601,7 +601,8 @@ input:checked+.slider:before {
     pointer-events: all;
 }
 
-.line1, .line2 {
+.line1,
+.line2 {
     padding: 0;
     margin: 15px -5px 15px 0;
     height: 5px;
@@ -609,7 +610,8 @@ input:checked+.slider:before {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-#catPlane, #dogPlane {
+#catPlane,
+#dogPlane {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -633,7 +635,8 @@ input:checked+.slider:before {
     top: 120%;
 }
 
-#catImg, #dogImg {
+#catImg,
+#dogImg {
     height: 80%;
     width: auto;
     border: 1px solid black;
@@ -692,7 +695,10 @@ input:checked+.slider:before {
     z-index: 1;
 }
 
-#htmlSkill, #cssSkill, #jsSkill, #otherSkills {
+#htmlSkill,
+#cssSkill,
+#jsSkill,
+#otherSkills {
     display: flex;
     flex-direction: row;
     place-items: center;
@@ -703,7 +709,13 @@ input:checked+.slider:before {
     transition: all 1s, opacity 0s;
 }
 
-.skillBox1, .skillBox2, .skillBox3, .skillBox4, .skillBox5, .skillBox6, .skillBoxOther {
+.skillBox1,
+.skillBox2,
+.skillBox3,
+.skillBox4,
+.skillBox5,
+.skillBox6,
+.skillBoxOther {
     display: flex;
     text-align: center;
     place-items: center;
@@ -741,7 +753,13 @@ input:checked+.slider:before {
     background-color: rgba(50, 50, 50, 0.5);
 }
 
-#skillText1, #skillText2, #skillText3, #skillText4, #skillText5, #skillText6, #skillText7 {
+#skillText1,
+#skillText2,
+#skillText3,
+#skillText4,
+#skillText5,
+#skillText6,
+#skillText7 {
     margin: 0 0 0 1vw;
     font-size: 1.5vw;
     color: white;
@@ -750,14 +768,24 @@ input:checked+.slider:before {
     opacity: 0;
 }
 
-#plane5, #plane6, #plane7, #plane8 {
+#plane5,
+#plane6,
+#plane7,
+#plane8 {
     min-height: 100px;
     min-width: 100px;
     transition: all 2s, opacity 0s;
     opacity: 0;
 }
 
-#planeMid1, #planeMid2, #planeMid3, #planeMid4, #planeMid5, #planeMid6, #planeMid7, #planeMid8 {
+#planeMid1,
+#planeMid2,
+#planeMid3,
+#planeMid4,
+#planeMid5,
+#planeMid6,
+#planeMid7,
+#planeMid8 {
     min-height: 100px;
     min-width: 100px;
     transition: all 2s, opacity 0s;
@@ -823,12 +851,16 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-#basicInfoButton, #interestsButton, #skillsButton {
+#basicInfoButton,
+#interestsButton,
+#skillsButton {
     background-color: rgb(80, 150, 80);
     transition: 0.25s;
 }
 
-#basicInfoButton:hover, #interestsButton:hover, #skillsButton:hover {
+#basicInfoButton:hover,
+#interestsButton:hover,
+#skillsButton:hover {
     background-color: rgb(150, 150, 150) !important;
     cursor: pointer;
 }
@@ -901,10 +933,7 @@ input:checked+.slider:before {
 #aboveBillboard,
 #billboardRectangle,
 #billboardSupportLeftStand,
-#billboardSupportRightStand,
-#billboardContactForm1,
-#billboardContactForm2,
-#billboardContactForm3 {
+#billboardSupportRightStand {
     transition: 2s;
 }
 
@@ -916,59 +945,20 @@ input:checked+.slider:before {
     transition: 0.25s;
 }
 
-#linkToGmail, #linkToLinkedIn, #linkToGithub {
+#linkToGmail,
+#linkToLinkedIn,
+#linkToGithub {
     pointer-events: all;
 }
 
-#linkToGmail:hover, #linkToLinkedIn:hover, #linkToGithub:hover {
+#linkToLinkedIn:hover,
+#linkToGithub:hover {
     cursor: pointer;
     filter: brightness(0.75);
 }
 
-#contactFormButton:hover {
-    cursor: pointer;
-    fill: #643dff;
-}
-
-#contactForm {
-    position: absolute;
-    display: none;
-    padding: 0;
-    margin: 0;
-    bottom: 100px;
-    left: 25%;
-    width: 40vw;
-    height: auto;
-    opacity: 0;
-    transition: all 2s, opacity 0.5s;
-    z-index: 4;
-}
-
-#contactText1,
-#contactText2,
-#contactText3,
-#contactText4,
-#contactRectangle1,
-#contactRectangle2,
-#contactRectangle3,
-#contactRectangle4,
-#contactRectangle5,
-#contactRectangle6,
-#contactPart1,
-#contactPart2 {
-    transition: 2s;
-}
-
-#contactText1 {
-    pointer-events: all;
-    fill: red;
-    transition: fill 0.1s;
-}
-
-#contactText1:hover {
-    cursor: pointer;
-    fill: lightcoral;
-}
+#linkToGmail:hover { cursor: pointer; }
+#linkToGmail:hover :not(rect) { filter: invert(0.5); }
 
 #nav4 {
     position: absolute;
