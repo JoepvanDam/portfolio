@@ -203,8 +203,7 @@ body {
     left: 4px;
     bottom: 4px;
     background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+    transition: 0.4s;
 }
 
 input:checked+.slider {
@@ -216,8 +215,6 @@ input:focus+.slider {
 }
 
 input:checked+.slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
 
@@ -238,7 +235,6 @@ input:checked+.slider:before {
     top: 3.5vw;
     right: 100vw;
     opacity: 1;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
     transition: 1s;
     z-index: 3;
 }
@@ -259,7 +255,6 @@ input:checked+.slider:before {
 }
 
 #settingsToolTipTriangle {
-    position: relative;
     padding: 0;
     margin: 0;
     width: 0;
