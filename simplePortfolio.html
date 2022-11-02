@@ -337,6 +337,17 @@
         #linkToGmail:hover :not(rect) {
             filter: invert(0.25);
         }
+
+        #contactBox {
+            width: 90vw;
+            height: auto;
+        }
+
+        @media screen and (max-width: 400px) {
+            #projectsContainer {
+                margin-left: -50px;
+            }
+        }
     </style>
 </head>
 
@@ -437,7 +448,7 @@
 
         <div id="contact">
             <h2>Contact me</h2>
-            <svg width="1001" height="501" viewBox="0 0 1001 501" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="contactBox" width="1001" height="501" viewBox="0 0 1001 501" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="1.53906" y="2.19678" width="997" height="497" fill="rgb(50, 50, 50)" rx="20px" ry="20px" />
                 <g id="linkToLinkedIn" onclick="toLinkedIn()">
                     <path fill-rule="evenodd" clip-rule="evenodd"
