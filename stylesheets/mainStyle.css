@@ -147,9 +147,17 @@ body {
     font-size: 24px;
 }
 
+.settingText a {
+    color: white;
+}
+
 .settingText img {
     height: 30px;
     width: 30px;
+}
+
+#settingsSimpleText {
+    width: 80%;
 }
 
 .settingFlag {
