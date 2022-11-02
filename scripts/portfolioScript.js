@@ -258,6 +258,8 @@ function languageSwitch(lang) {
         document.getElementById("settingsDarkmodeText2").innerHTML = "<img src='./images/moon.svg'><br>Darkmode<br>ON";
         document.getElementById("settingsAnimText1").innerHTML = "Animations<br>OFF";
         document.getElementById("settingsAnimText2").innerHTML = "Animations<br>ON";
+        document.getElementById("settingsSimpleText").innerHTML = "Only care about my information? <a href='./simplePortfolio.html' target='_blank'>Click here</a> for the simple version of this page.";
+
         // House welcome
         document.getElementById("houseWelcomeText4").innerHTML = "c";
         document.getElementById("houseWelcomeText7").innerHTML = "e";
@@ -329,6 +331,7 @@ function languageSwitch(lang) {
         document.getElementById("settingsDarkmodeText2").innerHTML = "<img src='./images/moon.svg'><br>Donker-modus<br>AAN";
         document.getElementById("settingsAnimText1").innerHTML = "Animaties<br>UIT";
         document.getElementById("settingsAnimText2").innerHTML = "Animaties<br>AAN";
+        document.getElementById("settingsSimpleText").innerHTML = "Wil je alleen mijn informatie zien? <a href='./simplePortfolio.html' target='_blank'>Klik hier</a> voor de simpele versie van deze pagina.";
 
         // House welcome
         document.getElementById("houseWelcomeText4").innerHTML = "k";
